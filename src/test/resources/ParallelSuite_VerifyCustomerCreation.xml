@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ParallelSuite_VerifyCustomerCreation" parallel="tests">
+
+	<test name="VerifyCustomerCreation">
+		<classes>
+			<class
+				name="testPackage1.VerifyCustomerCreation">
+				<methods>
+					<include name="openURL_CM" />
+					<include name="cmLogin" />
+					<include name="customerCreation" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="VerifyCustomerCreation2">
+		<classes>
+			<class
+				name="testPackage1.VerifyCustomerCreation2">
+				<methods>
+					<include name="openURL_CM" />
+					<include name="cmLogin" />
+					<include name="customerCreation" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite> 
