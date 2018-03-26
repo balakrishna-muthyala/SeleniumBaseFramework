@@ -25,7 +25,7 @@ public class TestBase
 {	
 public TestBase tb;
 	//Project Name
-	public static String projectName = "SeleniumBaseFramework2";
+	public static String projectName = "SeleniumBaseFramework";
 			
 	//Project Location
 	public static String projectLocation = System.getProperty("user.dir");
