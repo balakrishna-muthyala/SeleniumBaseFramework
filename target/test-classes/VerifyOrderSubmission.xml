@@ -17,7 +17,7 @@
 					<include name="address_SiteTechnicalContact" />
 					<include name="serviceConfiguration" />
 					<include name="orderSummary" />
-					<include name="cmLogout" />
+					<!-- <include name="cmLogout" /> -->
 				</methods>
 			</class>
 		</classes>

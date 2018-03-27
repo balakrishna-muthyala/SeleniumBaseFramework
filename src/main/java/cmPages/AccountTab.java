@@ -32,25 +32,27 @@ public class AccountTab extends TestBase{
 		// driver.findElement(By.xpath("//span[text()='Account']")).click();
 		driver.findElement(By.linkText("Account")).click();
 
-		driver.switchTo().defaultContent();
-		driver.switchTo().frame("mainFrame");
 		driver.switchTo().frame("AccountFrame");
-		Thread.sleep(2000);
 
 		driver.findElement(By.xpath("//td[@id='cmb-comboAccountType-inputCell']/following-sibling::td/div")).click();
 		driver.findElement(By.xpath("//li[text()='Service']")).click();
-		Thread.sleep(1000);
+		
 		driver.findElement(By.xpath("//input[@id='accName']")).sendKeys("sAcc123");
+		
 		driver.findElement(By.xpath("//td[@id='cmb-comboComcastLegalEntity-inputCell']/following-sibling::td/div")).click();
 		driver.findElement(By.xpath("//li[text()='Comcast Business Communications, LLC']")).click();
+		
 		driver.findElement(By.xpath("//td[@id='cmb-comboLineOfBusiness-inputCell']/following-sibling::td/div")).click();
 		driver.findElement(By.xpath("//li[@role='option' and contains(text(),'Metro E')]")).click();
-		Thread.sleep(1000);
+		
 		driver.findElement(By.xpath("//td[@id='cmb-comboVMarket-inputCell']/following-sibling::td/div")).click();
 		driver.findElement(By.xpath("//li[text()='Comcast']")).click();
+		
 		driver.findElement(By.id("useCustomerAddress")).click();
+		Thread.sleep(1000);
+		
 		driver.findElement(By.id("_eventId_createAccount")).click();
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 
 		if (driver.findElement(By.xpath("//span[@class='successMsg']")).isDisplayed()) {
 			//String serviceAccountNo = driver.findElement(By.xpath("//span[@class='successMsg']")).getText();
@@ -76,28 +78,27 @@ public class AccountTab extends TestBase{
 		driver.switchTo().frame("AccountFrame");
 
 		driver.findElement(By.id("_eventId_newAccount")).click();
-		Thread.sleep(2000);
-
+		Thread.sleep(1000);
+		
 		driver.findElement(By.xpath("//td[@id='cmb-comboAccountType-inputCell']/following-sibling::td/div")).click();
 		driver.findElement(By.xpath("//li[text()='Billing']")).click();
 		Thread.sleep(1000);
-
+		
 		driver.findElement(By.xpath("//td[@id='assocToCombo-inputCell']/following-sibling::td/div")).click();
 		driver.findElement(By.xpath("//li[text()='Service Account']")).click();
-
+		
 		driver.findElement(By.xpath("//td[@id='entityCombo-inputCell']/following-sibling::td/div")).click();
 		driver.findElement(By.xpath("(//div[text()='sAcc123'])[2]")).click();
+		
 		driver.findElement(By.xpath("//td[@id='entityCombo-inputCell']/following-sibling::td/div")).click();
-
+		
 		driver.findElement(By.id("billingAccountName")).sendKeys("bAcc123");
-
+		
 		driver.findElement(By.xpath("//img[@src='images/plus_circle.png']")).click();
-
 		driver.findElement(By.id("useCustomerAddress")).click();
 		Thread.sleep(1000);
-
+		
 		driver.findElement(By.id("_eventId_createAccount")).click();
-		Thread.sleep(5000);
 
 		if (driver.findElement(By.xpath("//span[@class='successMsg']")).isDisplayed()) 
 		{

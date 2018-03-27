@@ -28,9 +28,8 @@ public class AddressTab extends TestBase{
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame("mainFrame");
 		
-//		driver.findElement(By.linkText("Address")).click();
+		//driver.findElement(By.linkText("Address")).click();
 		driver.findElement(By.xpath("//span[contains(text(),'Address')]")).click();
-		Thread.sleep(1000);
 
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame("mainFrame");
@@ -45,23 +44,21 @@ public class AddressTab extends TestBase{
 
 		driver.findElement(By.xpath("//td[@id='CmbSitestate-inputCell']/following-sibling::td/div")).click();
 		driver.findElement(By.xpath("//li[text()='Alaska']")).click();
-		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("//td[@id='CmbSitecity-inputCell']/following-sibling::td/div")).click();
 		driver.findElement(By.xpath("//li[text()='Adak']")).click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("//td[@id='CmbSitezipcode-inputCell']/following-sibling::td/div")).click();
 		driver.findElement(By.xpath("//li[text()='99546']")).click();
-		Thread.sleep(2000);
-
-		driver.findElement(By.xpath("//td[@id='CmbSiteheadEndName-inputCell']/following-sibling::td/div")).click();
 		Thread.sleep(1000);
+		
+		driver.findElement(By.xpath("//td[@id='CmbSiteheadEndName-inputCell']/following-sibling::td/div")).click();
+
 		driver.findElement(By.xpath("//li[text()='albany.or']")).click();
 		Thread.sleep(1000);
-
+		
 		driver.findElement(By.id("create")).click();
-		Thread.sleep(5000);
 
 		try 
 		{
@@ -71,7 +68,6 @@ public class AddressTab extends TestBase{
 				driver.switchTo().frame("codition");
 				driver.findElement(By.name("diclaimercheck")).click();
 				driver.findElement(By.name("createSiteaddress")).click();
-				Thread.sleep(5000);
 			}
 		} 
 		catch (Exception e) 

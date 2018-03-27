@@ -19,6 +19,7 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 
 import com.google.common.io.Files;
@@ -38,6 +39,7 @@ public class UtilityClass extends TestBase{
 	}
 	
 	
+	@SuppressWarnings("deprecation")
 	public WebDriver initDriver() throws InterruptedException, IOException
 	{		
 
@@ -53,19 +55,20 @@ public class UtilityClass extends TestBase{
 		}
 		else if (browserName.contains("IE"))
 		{
-			System.setProperty("webdriver.ie.driver",ieDriverPath); 
-			driver = new InternetExplorerDriver();
 			/*System.setProperty("webdriver.ie.driver",ieDriverPath); 
+			driver = new InternetExplorerDriver();*/
+			
+			System.setProperty("webdriver.ie.driver",ieDriverPath); 
 			DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
 			capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 			capabilities.setCapability("requireWindowFocus", true);
-			driver = new InternetExplorerDriver(capabilities);*/
+			driver = new InternetExplorerDriver(capabilities);
 		}
 
 		driver.manage().window().maximize();		
-		Thread.sleep(1000);
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		//driver.manage().timeouts().pageLoadTimeout(1, TimeUnit.SECONDS);
 
-		driver.manage().timeouts().implicitlyWait(1,TimeUnit.SECONDS);
 		
 		return driver;
 

@@ -71,7 +71,7 @@ public class CmHomePage extends TestBase{
 		domain.selectByVisibleText("Century");
 
 		loginButton.click();
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 
 		boolean pageExist = new UtilityClass(driver, testdataHashMap, eTest).waitForPageLoad("Customer Manager",5000);
 
@@ -95,8 +95,6 @@ public class CmHomePage extends TestBase{
 		//driver.findElement(By.linkText("Signout")).click(); 
 		//driver.findElement(By.xpath("//ul[@id='RightSubTab']/../ul/li[3]/a")).click();		
 		logout.click();
-
-		Thread.sleep(2000);
 
 		String ExpectedTitle3 = "Login Page";
 		String ActualTitle3 = driver.getTitle();

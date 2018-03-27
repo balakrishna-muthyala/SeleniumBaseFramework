@@ -149,7 +149,7 @@ public class CustomerTab extends TestBase{
 		String salesforceID = "SF "+util.generateRandomNumber(7);
 
 		linkNewCustomer.click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame("mainFrame");
@@ -157,23 +157,31 @@ public class CustomerTab extends TestBase{
 
 		txtCustomerName.sendKeys(customerName);		
 		txtWorkPhone.sendKeys("");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
+		
 		txtWorkPhone.sendKeys(util.getTestdata("WorkPhone"));
+		
 		txtSalesforceAccountID.sendKeys(salesforceID);
+		
 		cmbAddressFormat.click();
+		
 		lstGeneralDelivery.click();
+		
 		txtAddressLine1.sendKeys(util.getTestdata("AddressLine1"));
+		
 		cmbState.click();
 		lstAlabama.click();
 		Thread.sleep(1000);
-		cmbCity.click();
+		
+		cmbCity.click();		
 		lstAbbeville.click();
 		Thread.sleep(1000);
-		cmbZipcode.click();
+		
+		cmbZipcode.click();		
 		lst36310.click();
 		Thread.sleep(1000);
+		
 		btnCreate.click();
-		Thread.sleep(5000);
 
 		try 
 		{
@@ -183,7 +191,6 @@ public class CustomerTab extends TestBase{
 				driver.switchTo().frame("codition");
 				chkIAgree.click();
 				btnContinue.click();
-				Thread.sleep(5000);
 			}
 		} 
 		catch (Exception e) 

@@ -29,12 +29,11 @@ public class ServicePage extends TestBase{
 		driver.switchTo().defaultContent();
 
 		driver.findElement(By.linkText("Service")).click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 
 		driver.switchTo().frame("mainFrame");
 
 		driver.findElement(By.id("loadAvailProduct")).click();
-		Thread.sleep(2000);
 
 		
 		//Plan search page
@@ -47,7 +46,7 @@ public class ServicePage extends TestBase{
 
 		new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("Plan Search Tab Details", "INFO", "YES");		
 		driver.findElement(By.id("loadSelectedProducts")).click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 
 		
 		//Feature page
@@ -60,7 +59,6 @@ public class ServicePage extends TestBase{
 		//Process page
 
 		//Service
-		
 		Select serviceTerms = new Select(driver.findElement(By.xpath("//td[text()='Terms']/following-sibling::td/select")));
 		serviceTerms.selectByVisibleText("1 Month");
 
@@ -68,20 +66,18 @@ public class ServicePage extends TestBase{
 		ownIPAddress.selectByVisibleText("Yes");
 
 		driver.findElement(By.id("saveParam")).click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		
 		System.out.println("Service saved in Process page");
 
 		//UNI
-
 		driver.findElement(By.xpath("//a[text()='UNI']")).click();
-
-		Select accessType = new Select(driver.findElement(By.xpath("//td[text()='Access Type']/following-sibling::td/select")));
-		accessType.selectByVisibleText("On-net");
 		Thread.sleep(1000);
 		
+		Select accessType = new Select(driver.findElement(By.xpath("//td[text()='Access Type']/following-sibling::td/select")));
+		accessType.selectByVisibleText("On-net");
+		
 		driver.findElement(By.xpath("//img[@alt='Address Lookup']")).click();
-		Thread.sleep(5000);
 
 		//For Automation Env
 		//driver.switchTo().frame(driver.findElement(By.xpath("(//iframe[@id='codition'])[2]")));
@@ -94,7 +90,6 @@ public class ServicePage extends TestBase{
 		driver.findElement(By.id("addr")).click();
 
 		driver.findElement(By.id("backToProcess")).click();
-		Thread.sleep(1000);
 
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame("mainFrame");
@@ -107,16 +102,16 @@ public class ServicePage extends TestBase{
 		uniPortSpeed.selectByVisibleText("1GigE");
 
 		driver.findElement(By.id("saveParam")).click();
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 
 		System.out.println("UNI saved in Process page");
 
 		//EVC
-
 		driver.findElement(By.xpath("//ul[@name='/EDI EVC Configuration/']/li/a")).click();
 		Thread.sleep(1000);
+		
 		driver.findElement(By.xpath("//td[@id='locZCombo-inputCell']/following-sibling::td/div")).click();
-		Thread.sleep(1000);
+
 		driver.findElement(By.xpath("//div[text()='site address']")).click();
 
 		driver.findElement(By.xpath("//td[text()='EVC Number']/following-sibling::td/input[5]")).sendKeys("4321");
@@ -125,24 +120,23 @@ public class ServicePage extends TestBase{
 		basicCoSBandwidth.selectByVisibleText("1Mbps");
 
 		driver.findElement(By.id("saveParam")).click();
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 
 		System.out.println("EVC saved in Process page");
 
 		new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("Process Tab Details", "INFO", "YES");
 		
 		driver.findElement(By.id("_eventId_continue")).click();
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 				
 		//Equipment fee site validation
 		driver.findElement(By.xpath("//span[text()='No']/following-sibling::span")).click();
-		Thread.sleep(5000);
 
 		boolean elementExist = new UtilityClass(driver, testdataHashMap, eTest).waitForElement("id", "submitOrder", 10000);
 		
 		if(elementExist)
 		{
-			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("Service page configuration", "PASS", "YES");
+			//new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("Service page configuration", "PASS", "YES");
 		}
 		else
 		{
@@ -188,9 +182,8 @@ public class ServicePage extends TestBase{
 		Thread.sleep(1000);
 		
 		driver.findElement(By.id("submitOrder")).click();
-		Thread.sleep(2000);
 		
-		//MRC NRC Popup
+		//MRC NRC Pop-up
 		try 
 		{
 			if (driver.findElement(By.xpath("//div[text()='Are you sure you want to submit the order with $0 NRC/RC?']")).isDisplayed()) 

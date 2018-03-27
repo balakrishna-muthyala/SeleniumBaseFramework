@@ -70,7 +70,7 @@ public class ContactPage extends TestBase{
 		}
 
 		driver.findElement(By.xpath("//input[@value='Back']")).click();
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 
 	}
 
@@ -88,7 +88,7 @@ public class ContactPage extends TestBase{
 		driver.switchTo().frame("AddressFrame");
 
 		driver.findElement(By.xpath("//img[@id='addcontact-toolEl']")).click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame("mainFrame");
@@ -103,14 +103,12 @@ public class ContactPage extends TestBase{
 		driver.findElement(By.id("officePhone")).sendKeys("2345456756");
 
 		driver.findElement(By.xpath("//input[@id='_eventId_saveContact']")).click();
-		Thread.sleep(2000);
 
 		try
 		{
 			if (driver.findElement(By.xpath("//span[text()='Yes']/following-sibling::span")).isDisplayed())
 			{
 				driver.findElement(By.xpath("//span[text()='Yes']/following-sibling::span")).click();			
-				Thread.sleep(2000);
 			}
 		}
 		catch (Exception e)
@@ -136,8 +134,7 @@ public class ContactPage extends TestBase{
 		}
 
 		driver.findElement(By.xpath("//input[@value='Back']")).click();
-		Thread.sleep(5000);
-
+		Thread.sleep(1000);
 
 	}
 
