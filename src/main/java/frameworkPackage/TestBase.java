@@ -26,6 +26,7 @@ public class TestBase
 public TestBase tb;
 	//Project Name
 	public static String projectName = "SeleniumBaseFramework";
+	public static String jenkinsWorkspacePath = "C:\\Users\\balakrishna.m\\.jenkins\\workspace\\";
 			
 	//Project Location
 	public static String projectLocation = System.getProperty("user.dir");
@@ -233,7 +234,7 @@ public TestBase tb;
 		System.out.println(suiteName + " - TestSuite execution completed");		
 		
 		// If execution starts from Jenkins
-		String jenkinsWorkspaceReportFile = "C:\\Users\\balakrishna.m\\.jenkins\\workspace\\"+projectName+"-"+suiteName+"\\"+"TestExtentReports.html";
+		String jenkinsWorkspaceReportFile = jenkinsWorkspacePath+projectName+"-"+suiteName+"\\"+"TestExtentReports.html";
 		File extentReportFile = new File(testReportFile);
 		File jenkinsWorkspaceLocation = new File(jenkinsWorkspaceReportFile);
 		try {
