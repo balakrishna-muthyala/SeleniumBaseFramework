@@ -44,6 +44,7 @@ public class AddressTab extends TestBase{
 
 		driver.findElement(By.xpath("//td[@id='CmbSitestate-inputCell']/following-sibling::td/div")).click();
 		driver.findElement(By.xpath("//li[text()='Alaska']")).click();
+		Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("//td[@id='CmbSitecity-inputCell']/following-sibling::td/div")).click();
 		driver.findElement(By.xpath("//li[text()='Adak']")).click();
