@@ -18,7 +18,7 @@ TestResources/TestData.xlsx for Test cases test data
 TestResources/WebDriverFiles for webdriver exe files
 
 <build> tag is important in pom.xml to execute the "suiteXmlFile" from Jenkins
-(eg. <suiteXmlFile>src/test/resources/VerifyCmLogin.xml</suiteXmlFile> Or <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> )
+(ex. <suiteXmlFile>src/test/resources/VerifyCmLogin.xml</suiteXmlFile> Or <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> )
 
 
 Project -> Maven -> Update Project : for all changes in project level like manually placing jars in .m2 (or) any changes made in pom.xml
