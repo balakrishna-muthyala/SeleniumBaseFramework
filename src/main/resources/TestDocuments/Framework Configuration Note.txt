@@ -26,3 +26,16 @@ Project -> Run As -> Maven install : for installing dependency jars from interne
 
 
 Note: Always try to use the latest Jars & WebDrivers for the project.
+
+
+
+Jenkins Job Configuration for Repository Code & Build :
+
+	-Git SourceCodeManagement: Repository URL -> https://github.com/balakrishna-muthyala/SeleniumBaseFramework
+
+	-Local Build: Root POM -> F:\SELENIUM\selenium-projects\SeleniumBaseFramework\pom.xml
+	-Remote Build: Root POM -> pom.xml
+
+	-Build: Goals and options -> test "-DsuiteXmlFile=src/test/resources/VerifyCmLogin.xml"
+
+
