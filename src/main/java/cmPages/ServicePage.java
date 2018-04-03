@@ -65,6 +65,8 @@ public class ServicePage extends TestBase{
 		Select ownIPAddress = new Select(driver.findElement(By.xpath("//td[text()='Customer Bringing Own IP Address']/following-sibling::td/select")));
 		ownIPAddress.selectByVisibleText("Yes");
 
+		new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("Service Details", "INFO", "YES");
+		
 		driver.findElement(By.id("saveParam")).click();
 		Thread.sleep(1000);
 		
@@ -94,13 +96,15 @@ public class ServicePage extends TestBase{
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame("mainFrame");
 
-		driver.findElement(By.xpath("//input[@id='surClliCom-inputEl']")).sendKeys("ALALALALALA");
+		driver.findElement(By.xpath("//input[@id='surClliCom-inputEl']")).sendKeys("xxxxALxxxxx");
 
 		driver.findElement(By.xpath("//input[@paramname='UNI Number']")).sendKeys("1123");
 
 		Select uniPortSpeed = new Select(driver.findElement(By.xpath("//td[text()='UNI Port Speed']/following-sibling::td/select")));
 		uniPortSpeed.selectByVisibleText("1GigE");
 
+		new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("UNI Details", "INFO", "YES");
+		
 		driver.findElement(By.id("saveParam")).click();
 		Thread.sleep(1000);
 
@@ -119,12 +123,15 @@ public class ServicePage extends TestBase{
 		Select basicCoSBandwidth = new Select(driver.findElement(By.xpath("//select[@paramname='Basic CoS Bandwidth']")));
 		basicCoSBandwidth.selectByVisibleText("1Mbps");
 
+		new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("EVC Details", "INFO", "YES");
+		
 		driver.findElement(By.id("saveParam")).click();
 		Thread.sleep(1000);
 
 		System.out.println("EVC saved in Process page");
 
-		new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("Process Tab Details", "INFO", "YES");
+		
+		new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("Process Tab Details", "PASS", "YES");
 		
 		driver.findElement(By.id("_eventId_continue")).click();
 		Thread.sleep(1000);
@@ -134,11 +141,7 @@ public class ServicePage extends TestBase{
 
 		boolean elementExist = new UtilityClass(driver, testdataHashMap, eTest).waitForElement("id", "submitOrder", 10000);
 		
-		if(elementExist)
-		{
-			//new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("Service page configuration", "PASS", "YES");
-		}
-		else
+		if(!elementExist)
 		{
 			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("Service page configuration", "FAIL", "YES");
 		}

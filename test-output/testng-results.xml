@@ -1,69 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="10" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="VerifyCmLogin" duration-ms="10793" started-at="2018-03-27T11:11:20Z" finished-at="2018-03-27T11:11:31Z">
+  <suite name="VerifyOrderSubmission" duration-ms="102520" started-at="2018-04-03T09:26:15Z" finished-at="2018-04-03T09:27:58Z">
     <groups>
     </groups>
-    <test name="VerifyCmLogin" duration-ms="10793" started-at="2018-03-27T11:11:20Z" finished-at="2018-03-27T11:11:31Z">
-      <class name="testPackage2.VerifyCmLogin">
-        <test-method status="PASS" signature="startSuite(org.testng.ITestContext)[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="startSuite" is-config="true" duration-ms="156" started-at="2018-03-27T16:41:20Z" finished-at="2018-03-27T16:41:20Z">
+    <test name="VerifyOrderSubmission" duration-ms="102520" started-at="2018-04-03T09:26:15Z" finished-at="2018-04-03T09:27:58Z">
+      <class name="testPackage2.VerifyOrderSubmission">
+        <test-method status="PASS" signature="startSuite(org.testng.ITestContext)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="startSuite" is-config="true" duration-ms="174" started-at="2018-04-03T14:56:15Z" finished-at="2018-04-03T14:56:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7fd4acee]]>
+                <![CDATA[org.testng.TestRunner@94f6bfb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSuite -->
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="startTest" is-config="true" duration-ms="5025" started-at="2018-03-27T16:41:20Z" finished-at="2018-03-27T16:41:25Z">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="startTest" is-config="true" duration-ms="5425" started-at="2018-04-03T14:56:15Z" finished-at="2018-04-03T14:56:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7fd4acee]]>
+                <![CDATA[org.testng.TestRunner@94f6bfb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="cmLogin()[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="cmLogin" duration-ms="5745" started-at="2018-03-27T16:41:25Z" finished-at="2018-03-27T16:41:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cmLogin -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-03-27T16:41:25Z" finished-at="2018-03-27T16:41:25Z">
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:56:21Z" finished-at="2018-04-03T14:56:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testPackage2.VerifyCmLogin.cmLogin() throws java.lang.Exception]]>
+                <![CDATA[public void testPackage2.VerifyOrderSubmission.cmLogin() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-03-27T16:41:31Z" finished-at="2018-03-27T16:41:31Z">
+        <test-method status="PASS" signature="cmLogin()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="cmLogin" duration-ms="6304" started-at="2018-04-03T14:56:21Z" finished-at="2018-04-03T14:56:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cmLogin -->
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:56:27Z" finished-at="2018-04-03T14:56:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cmLogin status=SUCCESS method=VerifyCmLogin.cmLogin()[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02] output={null}]]]>
+                <![CDATA[[TestResult name=cmLogin status=SUCCESS method=VerifyOrderSubmission.cmLogin()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="endTest" is-config="true" duration-ms="3" started-at="2018-03-27T16:41:31Z" finished-at="2018-03-27T16:41:31Z">
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:56:27Z" finished-at="2018-04-03T14:56:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testPackage2.VerifyOrderSubmission.customerCreation() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method status="PASS" signature="customerCreation()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="customerCreation" duration-ms="12890" started-at="2018-04-03T14:56:27Z" finished-at="2018-04-03T14:56:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customerCreation -->
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:56:40Z" finished-at="2018-04-03T14:56:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testPackage2.VerifyOrderSubmission.accountCreation_Service() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method status="PASS" signature="accountCreation_Service()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="accountCreation_Service" duration-ms="5909" started-at="2018-04-03T14:56:40Z" finished-at="2018-04-03T14:56:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountCreation_Service -->
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:56:40Z" finished-at="2018-04-03T14:56:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=customerCreation status=SUCCESS method=VerifyOrderSubmission.customerCreation()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endMethod -->
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:56:46Z" finished-at="2018-04-03T14:56:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=accountCreation_Service status=SUCCESS method=VerifyOrderSubmission.accountCreation_Service()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endMethod -->
+        <test-method status="PASS" signature="accountCreation_PrimaryContact()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="accountCreation_PrimaryContact" duration-ms="5853" started-at="2018-04-03T14:56:46Z" finished-at="2018-04-03T14:56:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountCreation_PrimaryContact -->
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:56:46Z" finished-at="2018-04-03T14:56:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testPackage2.VerifyOrderSubmission.accountCreation_PrimaryContact() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:56:52Z" finished-at="2018-04-03T14:56:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=accountCreation_PrimaryContact status=SUCCESS method=VerifyOrderSubmission.accountCreation_PrimaryContact()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endMethod -->
+        <test-method status="PASS" signature="accountCreation_Billing()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="accountCreation_Billing" duration-ms="7900" started-at="2018-04-03T14:56:52Z" finished-at="2018-04-03T14:57:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountCreation_Billing -->
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:56:52Z" finished-at="2018-04-03T14:56:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testPackage2.VerifyOrderSubmission.accountCreation_Billing() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="endMethod" is-config="true" duration-ms="1" started-at="2018-04-03T14:57:00Z" finished-at="2018-04-03T14:57:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=accountCreation_Billing status=SUCCESS method=VerifyOrderSubmission.accountCreation_Billing()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endMethod -->
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:57:00Z" finished-at="2018-04-03T14:57:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testPackage2.VerifyOrderSubmission.addressCreation() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method status="PASS" signature="addressCreation()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="addressCreation" duration-ms="11261" started-at="2018-04-03T14:57:00Z" finished-at="2018-04-03T14:57:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addressCreation -->
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:57:11Z" finished-at="2018-04-03T14:57:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testPackage2.VerifyOrderSubmission.address_SiteTechnicalContact() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method status="PASS" signature="address_SiteTechnicalContact()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="address_SiteTechnicalContact" duration-ms="8630" started-at="2018-04-03T14:57:11Z" finished-at="2018-04-03T14:57:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- address_SiteTechnicalContact -->
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:57:11Z" finished-at="2018-04-03T14:57:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addressCreation status=SUCCESS method=VerifyOrderSubmission.addressCreation()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endMethod -->
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:57:19Z" finished-at="2018-04-03T14:57:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=address_SiteTechnicalContact status=SUCCESS method=VerifyOrderSubmission.address_SiteTechnicalContact()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endMethod -->
+        <test-method status="PASS" signature="serviceConfiguration()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="serviceConfiguration" duration-ms="32260" started-at="2018-04-03T14:57:19Z" finished-at="2018-04-03T14:57:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serviceConfiguration -->
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:57:19Z" finished-at="2018-04-03T14:57:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testPackage2.VerifyOrderSubmission.serviceConfiguration() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:57:52Z" finished-at="2018-04-03T14:57:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testPackage2.VerifyOrderSubmission.orderSummary() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startMethod -->
+        <test-method status="PASS" signature="orderSummary()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="orderSummary" duration-ms="6049" started-at="2018-04-03T14:57:52Z" finished-at="2018-04-03T14:57:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderSummary -->
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:57:52Z" finished-at="2018-04-03T14:57:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=serviceConfiguration status=SUCCESS method=VerifyOrderSubmission.serviceConfiguration()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endMethod -->
+        <test-method status="PASS" signature="endTest()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="endTest" is-config="true" duration-ms="0" started-at="2018-04-03T14:57:58Z" finished-at="2018-04-03T14:57:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="endSuite" is-config="true" duration-ms="379" started-at="2018-03-27T16:41:31Z" finished-at="2018-03-27T16:41:31Z">
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-03T14:57:58Z" finished-at="2018-04-03T14:57:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=orderSummary status=SUCCESS method=VerifyOrderSubmission.orderSummary()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endMethod -->
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:testPackage2.VerifyOrderSubmission@5c7fa833]" name="endSuite" is-config="true" duration-ms="249" started-at="2018-04-03T14:57:58Z" finished-at="2018-04-03T14:57:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSuite -->
-      </class> <!-- testPackage2.VerifyCmLogin -->
-    </test> <!-- VerifyCmLogin -->
-  </suite> <!-- VerifyCmLogin -->
+      </class> <!-- testPackage2.VerifyOrderSubmission -->
+    </test> <!-- VerifyOrderSubmission -->
+  </suite> <!-- VerifyOrderSubmission -->
 </testng-results>
