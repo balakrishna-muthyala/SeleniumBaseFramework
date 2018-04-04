@@ -28,6 +28,7 @@ Project -> Run As -> Maven install : for installing dependency jars from interne
 Note: Always try to use the latest Jars & WebDrivers for the project.
 
 
+Use the DriverClass (Pojo) to achieve the batch execution using TestNg, and fill the DriverSheet with TestNgXml names & Execution Flag. (Without Jenkins) 
 
 Jenkins Job Configuration for Repository Code & Build :
 

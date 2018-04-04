@@ -2,68 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="VerifyCmLogin" duration-ms="10941" started-at="2018-04-04T06:08:10Z" finished-at="2018-04-04T06:08:21Z">
+  <suite name="Default suite" duration-ms="23972" started-at="2018-04-04T10:51:38Z" finished-at="2018-04-04T10:52:02Z">
     <groups>
     </groups>
-    <test name="VerifyCmLogin" duration-ms="10941" started-at="2018-04-04T06:08:10Z" finished-at="2018-04-04T06:08:21Z">
-      <class name="testPackage2.VerifyCmLogin">
-        <test-method status="PASS" signature="startSuite(org.testng.ITestContext)[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="startSuite" is-config="true" duration-ms="166" started-at="2018-04-04T11:38:10Z" finished-at="2018-04-04T11:38:10Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@7fd4acee]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="23972" started-at="2018-04-04T10:51:38Z" finished-at="2018-04-04T10:52:02Z">
+      <class name="frameworkPackage.DriverClass">
+        <test-method status="PASS" signature="DriverMethod()[pri:0, instance:frameworkPackage.DriverClass@4520ebad]" name="DriverMethod" duration-ms="23970" started-at="2018-04-04T16:21:38Z" finished-at="2018-04-04T16:22:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startSuite -->
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="startTest" is-config="true" duration-ms="4986" started-at="2018-04-04T11:38:10Z" finished-at="2018-04-04T11:38:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@7fd4acee]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="cmLogin()[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="cmLogin" duration-ms="5927" started-at="2018-04-04T11:38:15Z" finished-at="2018-04-04T11:38:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cmLogin -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-04T11:38:15Z" finished-at="2018-04-04T11:38:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testPackage2.VerifyCmLogin.cmLogin() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-04T11:38:21Z" finished-at="2018-04-04T11:38:21Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=cmLogin status=SUCCESS method=VerifyCmLogin.cmLogin()[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="endTest" is-config="true" duration-ms="2" started-at="2018-04-04T11:38:21Z" finished-at="2018-04-04T11:38:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTest -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:testPackage2.VerifyCmLogin@457e2f02]" name="endSuite" is-config="true" duration-ms="375" started-at="2018-04-04T11:38:21Z" finished-at="2018-04-04T11:38:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endSuite -->
-      </class> <!-- testPackage2.VerifyCmLogin -->
-    </test> <!-- VerifyCmLogin -->
-  </suite> <!-- VerifyCmLogin -->
+        </test-method> <!-- DriverMethod -->
+      </class> <!-- frameworkPackage.DriverClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

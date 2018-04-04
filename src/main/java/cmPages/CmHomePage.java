@@ -49,7 +49,7 @@ public class CmHomePage extends TestBase{
 
 		if (pageExist)
 		{
-			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("CM URL Open", "FAIL", "YES");
+			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("CM URL Open", "PASS", "YES");
 		} 
 		else 
 		{
