@@ -1,5 +1,6 @@
 package testPackage2;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cmPages.*;
@@ -7,74 +8,91 @@ import frameworkPackage.TestBase;
 
 public class VerifyOrderSubmission extends TestBase
 {
-	
+
+	public TestBase testBase = new TestBase();
+
 	//Constructor to assign the class name to global variable
 	public VerifyOrderSubmission()
 	{
 		testName_javaClass = this.getClass().getSimpleName();
 	}
-
+	
+	@BeforeClass
+	public void beforeTestClass() 
+	{
+		testBase.driver = driver;
+		testBase.testdataHashMap = testdataHashMap;
+		testBase.eTest = eTest;
+	}
+	
 	
 	// Test Methods
 	
-	@Test
+	@Test(priority=10)
+	public void openURL_CM() throws Exception
+	{
+		new CmHomePage(testBase).openURL_CM();		
+	}
+	
+	@Test(priority=20)
 	public void cmLogin() throws Exception
 	{
-		new CmHomePage(driver, testdataHashMap, eTest).cmLogin();
+		new CmHomePage(testBase).cmLogin();
 	}
 	
-	@Test
+	@Test(priority=30)
 	public void customerCreation() throws Exception
 	{
-		new CustomerTab(driver, testdataHashMap, eTest).customerCreation();
+		new CustomerTab(testBase).customerCreation();
 	}
 
-	@Test
+	@Test(priority=40)
 	public void accountCreation_Service() throws Exception
 	{
-		new AccountTab(driver, testdataHashMap, eTest).accountCreation_Service();
+		new AccountTab(testBase).accountCreation_Service();
 	}
 	
-	@Test
+	@Test(priority=50)
 	public void accountCreation_PrimaryContact() throws Exception
 	{
-		new ContactPage(driver, testdataHashMap, eTest).accountCreation_PrimaryContact();
+		new ContactPage(testBase).accountCreation_PrimaryContact();
 	}
 	
-	@Test
+	@Test(priority=60)
 	public void accountCreation_Billing() throws Exception
 	{
-		new AccountTab(driver, testdataHashMap, eTest).accountCreation_Billing();
+		new AccountTab(testBase).accountCreation_Billing();
 	}
 	
-	@Test
+	@Test(priority=70)
 	public void addressCreation() throws Exception
 	{
-		new AddressTab(driver, testdataHashMap, eTest).addressCreation();
+		new AddressTab(testBase).addressCreation();
 	}
 	
-	@Test
+	@Test(priority=80)
 	public void address_SiteTechnicalContact() throws Exception
 	{
-		new ContactPage(driver, testdataHashMap, eTest).address_SiteTechnicalContact();
+		new ContactPage(testBase).address_SiteTechnicalContact();
 	}
 	
-	@Test
+	@Test(priority=90)
 	public void serviceConfiguration() throws Exception
 	{
-		new ServicePage(driver, testdataHashMap, eTest).serviceConfiguration();
+		new ServicePage(testBase).serviceConfiguration();
 	}
 	
-	@Test
+	@Test(priority=100)
 	public void orderSummary() throws Exception
 	{
-		new ServicePage(driver, testdataHashMap, eTest).orderSummary();
+		new ServicePage(testBase).orderSummary();
 	}
 	
-	@Test
+	@Test(priority=110)
 	public void cmLogout() throws Exception
 	{
-		new CmHomePage(driver, testdataHashMap, eTest).cmLogout();				
+		new CmHomePage(testBase).cmLogout();				
 	}
 	
 }
+

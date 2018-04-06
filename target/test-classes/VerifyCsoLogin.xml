@@ -5,8 +5,7 @@
 
 	<test name="VerifyCsoLogin">
 		<classes>
-			<class
-				name="testPackage1.VerifyCsoLogin" />
+			<class name="testPackage2.VerifyCsoLogin" />
 		</classes>
 	</test> 
 	

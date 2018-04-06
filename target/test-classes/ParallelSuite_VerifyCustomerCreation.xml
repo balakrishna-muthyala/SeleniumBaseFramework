@@ -1,31 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="ParallelSuite_VerifyCustomerCreation" parallel="tests">
+<suite name="ParallelSuite_VerifyCustomerCreation" parallel="tests" thread-count="2">
 
 	<test name="VerifyCustomerCreation">
 		<classes>
-			<class
-				name="testPackage1.VerifyCustomerCreation">
-				<methods>
-					<include name="openURL_CM" />
-					<include name="cmLogin" />
-					<include name="customerCreation" />
-				</methods>
-			</class>
+			<class	name="testPackage1.VerifyCustomerCreation" />				
 		</classes>
 	</test>
-
+	
 	<test name="VerifyCustomerCreation2">
 		<classes>
-			<class
-				name="testPackage1.VerifyCustomerCreation2">
-				<methods>
-					<include name="openURL_CM" />
-					<include name="cmLogin" />
-					<include name="customerCreation" />
-				</methods>
-			</class>
+			<class	name="testPackage1.VerifyCustomerCreation2" />				
 		</classes>
 	</test>
 

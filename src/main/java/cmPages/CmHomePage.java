@@ -1,14 +1,9 @@
 package cmPages;
 
-import java.util.HashMap;
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
-import com.relevantcodes.extentreports.ExtentTest;
 
 import frameworkPackage.TestBase;
 import frameworkPackage.UtilityClass;
@@ -31,29 +26,29 @@ public class CmHomePage extends TestBase{
 	@FindBy(linkText="Signout")
 	WebElement logout; 
 
-
-	public CmHomePage(WebDriver driver, HashMap<String, String> testdataHashMap, ExtentTest eTest){
-		this.driver = driver;
-		this.testdataHashMap = testdataHashMap;
-		this.eTest = eTest;
-		PageFactory.initElements(driver, this);
+	
+	public CmHomePage(TestBase testBase){
+		this.testBase = testBase;
+		PageFactory.initElements(testBase.driver, this);
 	}
 
-
-
+	
 	public void openURL_CM() throws Exception
 	{
-		driver.get(cmURL);
-
-		boolean pageExist = new UtilityClass(driver, testdataHashMap, eTest).waitForPageLoad("Login Page",5000);
+		UtilityClass util = new UtilityClass(testBase);
+		
+		testBase.driver.get(cmURL);
+		Thread.sleep(2000);
+		
+		boolean pageExist = util.waitForPageLoad("Login Page",5000);
 
 		if (pageExist)
 		{
-			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("CM URL Open", "PASS", "YES");
+			testBase.extentReportsStep("CM URL Open", "PASS", "YES");
 		} 
 		else 
 		{
-			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("CM URL Open", "FAIL", "YES");
+			testBase.extentReportsStep("CM URL Open", "FAIL", "YES");
 		}
 
 	}
@@ -62,8 +57,8 @@ public class CmHomePage extends TestBase{
 
 	public void cmLogin() throws Exception 
 	{
-		openURL_CM();
-
+		UtilityClass util = new UtilityClass(testBase);
+		
 		loginUsername.sendKeys(strUsername);
 		loginPassword.sendKeys(strPassword);
 
@@ -73,15 +68,15 @@ public class CmHomePage extends TestBase{
 		loginButton.click();
 		Thread.sleep(1000);
 
-		boolean pageExist = new UtilityClass(driver, testdataHashMap, eTest).waitForPageLoad("Customer Manager",5000);
+		boolean pageExist = util.waitForPageLoad("Customer Manager",5000);
 
 		if (pageExist)
 		{
-			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("CM Login", "PASS", "YES");
+			testBase.extentReportsStep("CM Login", "PASS", "YES");
 		}
 		else
 		{
-			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("CM ULogin", "FAIL", "YES");
+			testBase.extentReportsStep("CM ULogin", "FAIL", "YES");
 		}
 
 
@@ -90,22 +85,22 @@ public class CmHomePage extends TestBase{
 
 	public void cmLogout() throws Exception
 	{
-		driver.switchTo().defaultContent();
+		testBase.driver.switchTo().defaultContent();
 
 		//driver.findElement(By.linkText("Signout")).click(); 
 		//driver.findElement(By.xpath("//ul[@id='RightSubTab']/../ul/li[3]/a")).click();		
 		logout.click();
 
 		String ExpectedTitle3 = "Login Page";
-		String ActualTitle3 = driver.getTitle();
+		String ActualTitle3 = testBase.driver.getTitle();
 
 		if (ActualTitle3.contentEquals(ExpectedTitle3))
 		{ 
-			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("CM Logout", "PASS", "YES");
+			testBase.extentReportsStep("CM Logout", "PASS", "YES");
 		}
 		else 
 		{ 
-			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("CM Logout", "FAIL", "YES");
+			testBase.extentReportsStep("CM Logout", "FAIL", "YES");
 		}
 
 	}

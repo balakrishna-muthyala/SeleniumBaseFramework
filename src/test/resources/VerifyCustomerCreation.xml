@@ -6,12 +6,7 @@
 	<test name="VerifyCustomerCreation">
 		<classes>
 			<class
-				name="testPackage1.VerifyCustomerCreation">
-				<methods>
-					<include name="cmLogin" />
-					<include name="customerCreation" />
-				</methods>
-			</class>
+				name="testPackage1.VerifyCustomerCreation" />
 		</classes>
 	</test>
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [ParallelSuite_VerifyCustomerCreation]" parallel="tests">
+  <test name="VerifyCustomerCreation2(failed)" parallel="tests">
+    <classes>
+      <class name="testPackage1.VerifyCustomerCreation2">
+        <methods>
+          <include name="startTest"/>
+          <include name="endMethod"/>
+          <include name="startMethod"/>
+          <include name="customerCreation"/>
+          <include name="startSuite"/>
+          <include name="beforeTestClass"/>
+          <include name="endSuite"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- testPackage1.VerifyCustomerCreation2 -->
+      <class name="testPackage1.VerifyCustomerCreation">
+        <methods>
+          <include name="startTest"/>
+          <include name="endMethod"/>
+          <include name="startMethod"/>
+          <include name="beforeTestClass"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- testPackage1.VerifyCustomerCreation -->
+    </classes>
+  </test> <!-- VerifyCustomerCreation2(failed) -->
+  <test name="VerifyCustomerCreation(failed)" parallel="tests">
+    <classes>
+      <class name="testPackage1.VerifyCustomerCreation2">
+        <methods>
+          <include name="startTest"/>
+          <include name="endMethod"/>
+          <include name="startMethod"/>
+          <include name="startSuite"/>
+          <include name="beforeTestClass"/>
+          <include name="endSuite"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- testPackage1.VerifyCustomerCreation2 -->
+      <class name="testPackage1.VerifyCustomerCreation">
+        <methods>
+          <include name="customerCreation"/>
+          <include name="startTest"/>
+          <include name="endMethod"/>
+          <include name="startMethod"/>
+          <include name="beforeTestClass"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- testPackage1.VerifyCustomerCreation -->
+    </classes>
+  </test> <!-- VerifyCustomerCreation(failed) -->
+</suite> <!-- Failed suite [ParallelSuite_VerifyCustomerCreation] -->

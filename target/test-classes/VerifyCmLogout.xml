@@ -5,13 +5,7 @@
 
 	<test name="VerifyCmLogout">
 		<classes>
-			<class
-				name="testPackage1.VerifyCmLogout">
-				<methods>
-					<include name="cmLogin" />
-					<include name="cmLogout" />
-				</methods>
-			</class>
+			<class name="testPackage1.VerifyCmLogout" />
 		</classes>
 	</test>
 

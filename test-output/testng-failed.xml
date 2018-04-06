@@ -5,13 +5,21 @@
     <classes>
       <class name="testPackage2.VerifyOrderSubmission">
         <methods>
-          <include name="orderSummary"/>
+          <include name="address_SiteTechnicalContact"/>
+          <include name="customerCreation"/>
           <include name="startTest"/>
           <include name="endMethod"/>
-          <include name="startMethod"/>
+          <include name="accountCreation_Service"/>
+          <include name="beforeTestClass"/>
+          <include name="addressCreation"/>
           <include name="serviceConfiguration"/>
-          <include name="startSuite"/>
+          <include name="accountCreation_PrimaryContact"/>
           <include name="endSuite"/>
+          <include name="orderSummary"/>
+          <include name="cmLogout"/>
+          <include name="startMethod"/>
+          <include name="startSuite"/>
+          <include name="accountCreation_Billing"/>
           <include name="endTest"/>
         </methods>
       </class> <!-- testPackage2.VerifyOrderSubmission -->

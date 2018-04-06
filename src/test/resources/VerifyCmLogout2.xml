@@ -5,9 +5,7 @@
 
 	<test name="VerifyCmLogout2">
 		<classes>
-			<class
-				name="testPackage1.VerifyCmLogout2">				
-			</class>
+			<class name="testPackage1.VerifyCmLogout2" />				
 		</classes>
 	</test>
 

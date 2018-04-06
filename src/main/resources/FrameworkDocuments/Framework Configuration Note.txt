@@ -1,21 +1,29 @@
 
 Create all Framework related classes&methods in "FrameworkPackage" under src/main/java 
-Create all application classes&methods in Application package ( 1 class file for 1 page in package) under src/main/java 
-Create all test classes&methods in testpackages ( 1 package for 1 test scenario/suite) under src/test/java 
+Create all application classes&methods in Application packages ( 1 class file for 1 page in package) under src/main/java 
 
-Each class has to extends "TestBase" mandatory
+Create all test classes & test methods in testpackages ( 1 package for 1 test scenario/suite) under src/test/java 
 
-test methods priority is not required, when we include the method names in testNg xml/ running from xml (If we give priority, it will consider only priority irrespective of testng xml flow")
-Need to give priorities for test methods in testPackage, when we give only class name in xml
-Need to give priorities for test methods in testPackage, when we want to execute from test java class
+Create all Input resources under src/main/resources to execute run the project
 
-TestNG xml File name = xml Suite name = Project name-Jenkins Job Name
+Create all TestNgXml files under src/test/resources to execute the Test cases
+
+Each class has to extends "TestBase". 
+Each Test Class should have constructor for getting the ClassName
+Each Test Class should have @BeforeClass Method for initializing the TestBase object
+Each Page Class should have constructor to access the TestBase object 
+
+Test methods priority is not required, when we include the method names in testNg xml and running from testNg xml (If we give priority, it will consider only priority irrespective of testng xml flow")
+Need to give priorities for test methods in testPackage, when we give only class name in testNg xml
+Need to give priorities for test methods in testPackage, when we want to execute from java test class
+
+TestNG xml File name = xml Suite name = Jenkins Job Name (Project name-Jenkins Job Name)
 TestNG Test name = Test data test case name
 TestNG Class name = testPackage java class name
 
-TestResources/PropertiesFile for Project Global variables
-TestResources/TestData.xlsx for Test cases test data
-TestResources/WebDriverFiles for webdriver exe files
+ src/main/resources/PropertiesFile for Project configuration variables
+ src/main/resources/TestData.xlsx for Test cases test data
+ src/main/resources/WebDriverFiles for webdriver exe files
 
 <build> tag is important in pom.xml to execute the "suiteXmlFile" from Jenkins
 (ex. <suiteXmlFile>src/test/resources/VerifyCmLogin.xml</suiteXmlFile> Or <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> )
@@ -28,7 +36,7 @@ Project -> Run As -> Maven install : for installing dependency jars from interne
 Note: Always try to use the latest Jars & WebDrivers for the project.
 
 
-Use the DriverClass (Pojo) to achieve the batch execution using TestNg, and fill the DriverSheet with TestNgXml names & Execution Flag. (Without Jenkins) 
+- Use the DriverClass (Pojo) to start the batch execution using TestNg, before this fill the DriverSheet with TestNgXml names & Execution Flag. (Without Jenkins) 
 
 Jenkins Job Configuration for Repository Code & Build :
 

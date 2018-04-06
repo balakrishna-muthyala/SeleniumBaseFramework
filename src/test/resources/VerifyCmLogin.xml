@@ -5,12 +5,7 @@
 
 	<test name="VerifyCmLogin">
 		<classes>
-			<class
-				name="testPackage2.VerifyCmLogin">
-				<methods>
-					<include name="cmLogin" />
-				</methods>
-			</class>
+			<class name="testPackage2.VerifyCmLogin" />
 		</classes>
 	</test>
 

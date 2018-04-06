@@ -1,5 +1,6 @@
 package testPackage2;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cmPages.*;
@@ -7,22 +8,37 @@ import frameworkPackage.TestBase;
 
 public class VerifyCmLogin extends TestBase
 {
+	public TestBase testBase = new TestBase();
+	
 	//Constructor to assign the class name to global variable
 	public VerifyCmLogin() throws Exception
 	{
 		testName_javaClass = this.getClass().getSimpleName();
 	}
 
+	@BeforeClass
+	public void beforeTestClass() 
+	{
+		testBase.driver = driver;
+		testBase.testdataHashMap = testdataHashMap;
+		testBase.eTest = eTest;
+	}
+	
 	
 	// Test Methods
 
-	@Test
-	public void cmLogin() throws Exception
+	@Test(priority=10)
+	public void openURL_CM() throws Exception
 	{
-		new CmHomePage(driver, testdataHashMap, eTest).cmLogin();		
+		new CmHomePage(testBase).openURL_CM();		
 	}
 	
-
+	@Test(priority=20)
+	public void cmLogin() throws Exception
+	{
+		new CmHomePage(testBase).cmLogin();		
+	}
+	
 	
 	/*public void verifyCmLogin() throws Exception
 	{

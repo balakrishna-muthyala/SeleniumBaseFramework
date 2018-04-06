@@ -1,19 +1,13 @@
 package csoPages;
 
-import java.util.HashMap;
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import com.relevantcodes.extentreports.ExtentTest;
-
 import frameworkPackage.TestBase;
-import frameworkPackage.UtilityClass;
 
-public class CsoLoginPage extends TestBase
+public class CsoHomePage extends TestBase
 {
 	
 	@FindBy(id="username")
@@ -29,33 +23,31 @@ public class CsoLoginPage extends TestBase
 	WebElement csoLoginButton; 
 	
 	
-	public CsoLoginPage(WebDriver driver, HashMap<String, String> testdataHashMap, ExtentTest eTest)
+	public CsoHomePage(TestBase testBase) 
 	{
-		this.driver = driver;
-		this.testdataHashMap = testdataHashMap;
-		this.eTest = eTest;
-		PageFactory.initElements(driver, this);
+		this.testBase = testBase;
+		PageFactory.initElements(testBase.driver, this);
 	}
-	
-	
+
+
 	public void openURL_CSO() throws Exception
 	{
 
 		//String csoURL = "https://sit-hydra.excelacom.in/OM";
-		driver.get(csoURL);
+		testBase.driver.get(csoURL);
 
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 
 		String ExpectedTitle = "Login Page";
-		String ActualTitle = driver.getTitle();
+		String ActualTitle = this.testBase.driver.getTitle();
 
 		if (ActualTitle.contentEquals(ExpectedTitle))
 		{
-			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("CSO URL Open", "PASS", "YES");
+			testBase.extentReportsStep("CSO URL Open", "PASS", "YES");
 		} 
 		else 
 		{
-			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("CSO URL Open", "FAIL", "YES");
+			testBase.extentReportsStep("CSO URL Open", "FAIL", "YES");
 		}
 	}
 
@@ -68,15 +60,15 @@ public class CsoLoginPage extends TestBase
 		String strUsername = "custpmauto";
 		String strPassword = "welcome123";
 
-		/*driver.findElement(By.id("username")).sendKeys(strUsername);
-		driver.findElement(By.id("password")).sendKeys(strPassword);
+		/*this.testBase.driver.findElement(By.id("username")).sendKeys(strUsername);
+		this.testBase.driver.findElement(By.id("password")).sendKeys(strPassword);
 
-		Select domain = new Select(driver.findElement(By.id("domainList")));
+		Select domain = new Select(this.testBase.driver.findElement(By.id("domainList")));
 		domain.selectByVisibleText("Century");
 
 		Thread.sleep(5000);
 
-		driver.findElement(By.xpath("//input[@id='logButton']")).click();
+		this.testBase.driver.findElement(By.xpath("//input[@id='logButton']")).click();
 
 		Thread.sleep(5000);*/
 		
@@ -89,15 +81,15 @@ public class CsoLoginPage extends TestBase
 		csoLoginButton.click();
 
 		String ExpectedTitle = "Service Orchestrator";
-		String ActualTitle = driver.getTitle();
+		String ActualTitle = this.testBase.driver.getTitle();
 
 		if (ActualTitle.contentEquals(ExpectedTitle))
 		{
-			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("CSO Login", "PASS", "YES");
+			testBase.extentReportsStep("CSO Login", "PASS", "YES");
 		}
 		else
 		{
-			new UtilityClass(driver, testdataHashMap, eTest).extentReportsStep("CSO Login", "FAIL", "YES");
+			testBase.extentReportsStep("CSO Login", "FAIL", "YES");
 		}
 
 		Thread.sleep(10000);
@@ -105,7 +97,7 @@ public class CsoLoginPage extends TestBase
 	}
 	
 	
-		
+	
 
 }
 

@@ -3,18 +3,13 @@
 
 <suite name="VerifyCmLogin">
 
-<listeners>
-<listener class-name="frameworkPackage.Listeners"></listener>
-</listeners>
+	<listeners>
+		<listener class-name="frameworkPackage.Listeners"></listener>
+	</listeners>
 
 	<test name="VerifyCmLogin">
 		<classes>
-			<class
-				name="testPackage2.VerifyCmLogin">
-				<methods>
-					<include name="cmLogin" />
-				</methods>
-			</class>
+			<class name="testPackage2.VerifyCmLogin" />
 		</classes>
 	</test>
 
