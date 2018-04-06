@@ -21,7 +21,7 @@ public class DriverClass
 		
 		List<String> suitefiles=new ArrayList<String>();
 
-		TestNG runner=new TestNG();
+		/*TestNG runner=new TestNG();
 		
 		//Read values from Excel file
 		FileInputStream fis = new FileInputStream(projectLocationPath+"\\src\\main\\resources\\DriverSheet.xlsx");
@@ -30,7 +30,7 @@ public class DriverClass
 
 		int rownum = sheet.getPhysicalNumberOfRows();
 
-		/*for(int i=1;i<rownum;i++)
+		for(int i=1;i<rownum;i++)
 		{
 			//Execution Flag
 			String xcellkey=sheet.getRow(i).getCell(2).getStringCellValue();
@@ -43,14 +43,14 @@ public class DriverClass
 				//TestNg files location
 				suitefiles.add(projectLocationPath+"\\src\\test\\resources\\"+xcellValue);
 			}
-		}*/
+		}
 
 		wb.close();
 
 		//System.out.println(suitefiles);
 
 		runner.setTestSuites(suitefiles);
-		runner.run();
+		runner.run();*/
 
 	}    
 	
