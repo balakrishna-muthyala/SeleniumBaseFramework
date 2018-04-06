@@ -1,4 +1,4 @@
-/*
+
 package frameworkPackage;
 
 import java.io.FileInputStream;
@@ -11,9 +11,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.TestNG;
 import org.testng.annotations.Test;
 
+@Test
 public class DriverClass 
 {
-	@Test
+	
 	public void DriverMethod() throws IOException
 	{
 		//Project Location
@@ -27,7 +28,6 @@ public class DriverClass
 		FileInputStream fis = new FileInputStream(projectLocationPath+"\\src\\main\\resources\\DriverSheet.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 		XSSFSheet sheet = wb.getSheetAt(0);
-		//XSSFRow rows = sheet.getRow(0);
 
 		int rownum = sheet.getPhysicalNumberOfRows();
 
@@ -58,4 +58,3 @@ public class DriverClass
 }
 
 
-*/
