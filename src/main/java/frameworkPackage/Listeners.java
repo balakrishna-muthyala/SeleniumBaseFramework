@@ -10,7 +10,7 @@ import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
-public class Listeners extends TestBase implements ITestListener, ISuiteListener, IInvokedMethodListener 
+public class Listeners extends FrameworkBase implements ITestListener, ISuiteListener, IInvokedMethodListener 
 {
 
 	// This belongs to ISuiteListener and will execute before the Suite start

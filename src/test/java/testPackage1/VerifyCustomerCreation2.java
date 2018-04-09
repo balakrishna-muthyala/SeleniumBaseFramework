@@ -4,12 +4,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import cmPages.*;
-import frameworkPackage.TestBase;
+import frameworkPackage.FrameworkBase;
 
-public class VerifyCustomerCreation2 extends TestBase
+public class VerifyCustomerCreation2 extends FrameworkBase
 {
 
-	public TestBase testBase = new TestBase();
+	public FrameworkBase fBase = new FrameworkBase();
 
 	//Constructor to assign the class name to global variable
 	public VerifyCustomerCreation2()
@@ -20,9 +20,9 @@ public class VerifyCustomerCreation2 extends TestBase
 	@BeforeClass
 	public void beforeTestClass() 
 	{
-		testBase.driver = driver;
-		testBase.testdataHashMap = testdataHashMap;
-		testBase.eTest = eTest;
+		fBase.driver = driver;
+		fBase.testdataHashMap = testdataHashMap;
+		fBase.eTest = eTest;
 	}
 	
 	
@@ -31,19 +31,19 @@ public class VerifyCustomerCreation2 extends TestBase
 	@Test(priority=10)
 	public void openURL_CM() throws Exception
 	{
-		new CmHomePage(testBase).openURL_CM();		
+		new CmHomePage(fBase).openURL_CM();		
 	}
 	
 	@Test(priority=20)
 	public void cmLogin() throws Exception
 	{
-		new CmHomePage(testBase).cmLogin();
+		new CmHomePage(fBase).cmLogin();
 	}
 	
 	@Test(priority=30)
 	public void customerCreation() throws Exception
 	{
-		new CustomerTab(testBase).customerCreation();
+		new CustomerTab(fBase).customerCreation();
 	}
 
 	

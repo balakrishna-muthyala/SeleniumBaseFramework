@@ -3,14 +3,15 @@ package cmPages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
-import frameworkPackage.TestBase;
+import frameworkPackage.FrameworkBase;
+import frameworkPackage.UtilityClass;
 
-public class AddressTab extends TestBase{
+public class AddressTab extends FrameworkBase{
 
-	public AddressTab(TestBase testBase) 
+	public AddressTab(FrameworkBase fBase) 
 	{
-		this.testBase = testBase;
-		PageFactory.initElements(testBase.driver, this);
+		this.fBase = fBase;
+		PageFactory.initElements(fBase.driver, this);
 	}
 	
 	
@@ -18,50 +19,53 @@ public class AddressTab extends TestBase{
 	public void addressCreation() throws Exception
 	{
 
-		testBase.driver.switchTo().defaultContent();
-		testBase.driver.switchTo().frame("mainFrame");
+		UtilityClass util = new UtilityClass(fBase);
 		
-		//testBase.driver.findElement(By.linkText("Address")).click();
-		testBase.driver.findElement(By.xpath("//span[contains(text(),'Address')]")).click();
+		fBase.driver.switchTo().defaultContent();
+		fBase.driver.switchTo().frame("mainFrame");
+		
+		//fBase.driver.findElement(By.linkText("Address")).click();
+		fBase.driver.findElement(By.xpath("//span[contains(text(),'Address')]")).click();
 
-		testBase.driver.switchTo().defaultContent();
-		testBase.driver.switchTo().frame("mainFrame");
-		testBase.driver.switchTo().frame("AddressFrame");
+		fBase.driver.switchTo().defaultContent();
+		fBase.driver.switchTo().frame("mainFrame");
+		fBase.driver.switchTo().frame("AddressFrame");
 
-		testBase.driver.findElement(By.id("addrSiteBean.siteName")).sendKeys("site address");
+		fBase.driver.findElement(By.id("addrSiteBean.siteName")).sendKeys("Custom site name");
 
-		testBase.driver.findElement(By.xpath("//td[@id='cmbaddrSiteBean.siteType-inputCell']/following-sibling::td/div")).click();
-		testBase.driver.findElement(By.xpath("//li[text()='Residential']")).click();
+		fBase.driver.findElement(By.xpath("//td[@id='cmbaddrSiteBean.siteType-inputCell']/following-sibling::td/div")).click();
+		fBase.driver.findElement(By.xpath("//li[text()='Residential']")).click();
 
-		testBase.driver.findElement(By.id("addrSiteBean.address1")).sendKeys("siteAddress 1");
+		fBase.driver.findElement(By.id("addrSiteBean.address1")).sendKeys("CustomSiteAddress 1");
 
-		testBase.driver.findElement(By.xpath("//td[@id='CmbSitestate-inputCell']/following-sibling::td/div")).click();
-		testBase.driver.findElement(By.xpath("//li[text()='Alaska']")).click();
+		fBase.driver.findElement(By.xpath("//td[@id='CmbSitestate-inputCell']/following-sibling::td/div")).click();
+		fBase.driver.findElement(By.xpath("//li[text()='Alaska']")).click();
 		Thread.sleep(1000);
 		
-		testBase.driver.findElement(By.xpath("//td[@id='CmbSitecity-inputCell']/following-sibling::td/div")).click();
-		testBase.driver.findElement(By.xpath("//li[text()='Adak']")).click();
+		fBase.driver.findElement(By.xpath("//td[@id='CmbSitecity-inputCell']/following-sibling::td/div")).click();
+		fBase.driver.findElement(By.xpath("//li[text()='Adak']")).click();
 		Thread.sleep(1000);
 		
-		testBase.driver.findElement(By.xpath("//td[@id='CmbSitezipcode-inputCell']/following-sibling::td/div")).click();
-		testBase.driver.findElement(By.xpath("//li[text()='99546']")).click();
+		fBase.driver.findElement(By.xpath("//td[@id='CmbSitezipcode-inputCell']/following-sibling::td/div")).click();
+		fBase.driver.findElement(By.xpath("//li[text()='99546']")).click();
 		Thread.sleep(1000);
 		
-		testBase.driver.findElement(By.xpath("//td[@id='CmbSiteheadEndName-inputCell']/following-sibling::td/div")).click();
-
-		testBase.driver.findElement(By.xpath("//li[text()='albany.or']")).click();
+		fBase.driver.findElement(By.xpath("//td[@id='CmbSiteheadEndName-inputCell']/following-sibling::td/div")).click();
+		fBase.driver.findElement(By.xpath("//li[text()='albany.or']")).click();
 		Thread.sleep(1000);
 		
-		testBase.driver.findElement(By.id("create")).click();
+		fBase.driver.findElement(By.id("create")).click();
+		
+		util.waitForElement("name", "disclaimer", 5);
 
 		try 
 		{
-			if (testBase.driver.findElement(By.name("disclaimer")).isDisplayed()) 
+			if (fBase.driver.findElement(By.name("disclaimer")).isDisplayed()) 
 			{
-				testBase.driver.findElement(By.name("disclaimer")).click();
-				testBase.driver.switchTo().frame("codition");
-				testBase.driver.findElement(By.name("diclaimercheck")).click();
-				testBase.driver.findElement(By.name("createSiteaddress")).click();
+				fBase.driver.findElement(By.name("disclaimer")).click();
+				fBase.driver.switchTo().frame("codition");
+				fBase.driver.findElement(By.name("diclaimercheck")).click();
+				fBase.driver.findElement(By.name("createSiteaddress")).click();
 			}
 		} 
 		catch (Exception e) 
@@ -69,18 +73,18 @@ public class AddressTab extends TestBase{
 			System.err.println("more button is not displayed due to known Address ");
 		}
 
-		testBase.driver.switchTo().defaultContent();
-		testBase.driver.switchTo().frame("mainFrame");
-		testBase.driver.switchTo().frame("AddressFrame");
+		fBase.driver.switchTo().defaultContent();
+		fBase.driver.switchTo().frame("mainFrame");
+		fBase.driver.switchTo().frame("AddressFrame");
 
-		if (testBase.driver.findElement(By.xpath("//span[@class='successMsg']")).isDisplayed())
+		if (fBase.driver.findElement(By.xpath("//span[@class='successMsg']")).isDisplayed())
 		{
-			//System.out.println(testBase.driver.findElement(By.xpath("//span[@class='successMsg']")).getText());
-			testBase.extentReportsStep("Adress Creation", "PASS", "YES");
+			//System.out.println(fBase.driver.findElement(By.xpath("//span[@class='successMsg']")).getText());
+			fBase.extentReportsStep("Adress Creation", "PASS", "YES");
 		}
 		else
 		{
-			testBase.extentReportsStep("Adress Creation", "FAIL", "YES");
+			fBase.extentReportsStep("Adress Creation", "FAIL", "YES");
 		}
 
 

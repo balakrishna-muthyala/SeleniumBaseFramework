@@ -19,37 +19,44 @@ public class DriverClass
 		//Project Location
 		String projectLocationPath = System.getProperty("user.dir");
 		
-		List<String> suitefiles=new ArrayList<String>();
-
+		//Driver Sheet Path
+		String driverSheetPath = projectLocationPath+"\\src\\main\\resources\\DriverSheet.xlsx";
+		
+		//TestNg Xmls Location in Project
+		String testNgXmlsLocation = projectLocationPath+"\\src\\test\\resources";
+		
+		List<String> suiteFiles=new ArrayList<String>();
 		TestNG runner=new TestNG();
 		
 		//Read values from Excel file
-		FileInputStream fis = new FileInputStream(projectLocationPath+"\\src\\main\\resources\\DriverSheet.xlsx");
+		FileInputStream fis = new FileInputStream(driverSheetPath);
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 		XSSFSheet sheet = wb.getSheetAt(0);
 
-		int rownum = sheet.getPhysicalNumberOfRows();
+		int rowCount = sheet.getPhysicalNumberOfRows();
 
-		for(int i=1;i<rownum;i++)
+		for(int i=1; i<rowCount; i++)
 		{
 			//Execution Flag
-			String xcellkey=sheet.getRow(i).getCell(2).getStringCellValue();
+			String executionFlag = sheet.getRow(i).getCell(2).getStringCellValue();
 
-			if(xcellkey.equals("YES"))
+			if(executionFlag.equals("YES"))
 			{
 				//Xml names
-				String xcellValue = sheet.getRow(i).getCell(1).getStringCellValue();
+				String testNgXmlName_Sheet = sheet.getRow(i).getCell(1).getStringCellValue();
 
+				String testNgXmlFilePath_Project = testNgXmlsLocation+"\\"+testNgXmlName_Sheet;
+				
 				//TestNg files location
-				suitefiles.add(projectLocationPath+"\\src\\test\\resources\\"+xcellValue);
+				suiteFiles.add(testNgXmlFilePath_Project);
 			}
 		}
 
 		wb.close();
 
-		//System.out.println(suitefiles);
+		//System.out.println(suiteFiles);
 
-		runner.setTestSuites(suitefiles);
+		runner.setTestSuites(suiteFiles);
 		runner.run();
 
 	}    

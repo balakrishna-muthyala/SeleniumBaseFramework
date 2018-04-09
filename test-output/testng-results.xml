@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39556" started-at="2018-04-06T13:57:11Z" finished-at="2018-04-06T13:57:51Z">
+  <suite name="Default suite" duration-ms="23425" started-at="2018-04-09T10:51:47Z" finished-at="2018-04-09T10:52:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39556" started-at="2018-04-06T13:57:11Z" finished-at="2018-04-06T13:57:51Z">
+    <test name="Default test" duration-ms="23425" started-at="2018-04-09T10:51:47Z" finished-at="2018-04-09T10:52:11Z">
       <class name="frameworkPackage.DriverClass">
-        <test-method status="PASS" signature="DriverMethod()[pri:0, instance:frameworkPackage.DriverClass@2ef5e5e3]" name="DriverMethod" duration-ms="39526" started-at="2018-04-06T19:27:11Z" finished-at="2018-04-06T19:27:51Z">
+        <test-method status="PASS" signature="DriverMethod()[pri:0, instance:frameworkPackage.DriverClass@2ef5e5e3]" name="DriverMethod" duration-ms="23402" started-at="2018-04-09T16:21:47Z" finished-at="2018-04-09T16:22:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DriverMethod -->

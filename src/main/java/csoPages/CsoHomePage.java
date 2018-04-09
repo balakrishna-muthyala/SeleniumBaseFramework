@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import frameworkPackage.TestBase;
+import frameworkPackage.FrameworkBase;
 
-public class CsoHomePage extends TestBase
+public class CsoHomePage extends FrameworkBase
 {
 	
 	@FindBy(id="username")
@@ -23,10 +23,10 @@ public class CsoHomePage extends TestBase
 	WebElement csoLoginButton; 
 	
 	
-	public CsoHomePage(TestBase testBase) 
+	public CsoHomePage(FrameworkBase fBase) 
 	{
-		this.testBase = testBase;
-		PageFactory.initElements(testBase.driver, this);
+		this.fBase = fBase;
+		PageFactory.initElements(fBase.driver, this);
 	}
 
 
@@ -34,20 +34,20 @@ public class CsoHomePage extends TestBase
 	{
 
 		//String csoURL = "https://sit-hydra.excelacom.in/OM";
-		testBase.driver.get(csoURL);
+		fBase.driver.get(csoURL);
 
 		Thread.sleep(2000);
 
 		String ExpectedTitle = "Login Page";
-		String ActualTitle = this.testBase.driver.getTitle();
+		String ActualTitle = this.fBase.driver.getTitle();
 
 		if (ActualTitle.contentEquals(ExpectedTitle))
 		{
-			testBase.extentReportsStep("CSO URL Open", "PASS", "YES");
+			fBase.extentReportsStep("CSO URL Open", "PASS", "YES");
 		} 
 		else 
 		{
-			testBase.extentReportsStep("CSO URL Open", "FAIL", "YES");
+			fBase.extentReportsStep("CSO URL Open", "FAIL", "YES");
 		}
 	}
 
@@ -60,15 +60,15 @@ public class CsoHomePage extends TestBase
 		String strUsername = "custpmauto";
 		String strPassword = "welcome123";
 
-		/*this.testBase.driver.findElement(By.id("username")).sendKeys(strUsername);
-		this.testBase.driver.findElement(By.id("password")).sendKeys(strPassword);
+		/*this.fBase.driver.findElement(By.id("username")).sendKeys(strUsername);
+		this.fBase.driver.findElement(By.id("password")).sendKeys(strPassword);
 
-		Select domain = new Select(this.testBase.driver.findElement(By.id("domainList")));
+		Select domain = new Select(this.fBase.driver.findElement(By.id("domainList")));
 		domain.selectByVisibleText("Century");
 
 		Thread.sleep(5000);
 
-		this.testBase.driver.findElement(By.xpath("//input[@id='logButton']")).click();
+		this.fBase.driver.findElement(By.xpath("//input[@id='logButton']")).click();
 
 		Thread.sleep(5000);*/
 		
@@ -81,15 +81,15 @@ public class CsoHomePage extends TestBase
 		csoLoginButton.click();
 
 		String ExpectedTitle = "Service Orchestrator";
-		String ActualTitle = this.testBase.driver.getTitle();
+		String ActualTitle = this.fBase.driver.getTitle();
 
 		if (ActualTitle.contentEquals(ExpectedTitle))
 		{
-			testBase.extentReportsStep("CSO Login", "PASS", "YES");
+			fBase.extentReportsStep("CSO Login", "PASS", "YES");
 		}
 		else
 		{
-			testBase.extentReportsStep("CSO Login", "FAIL", "YES");
+			fBase.extentReportsStep("CSO Login", "FAIL", "YES");
 		}
 
 		Thread.sleep(10000);

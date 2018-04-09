@@ -34,9 +34,9 @@ import com.relevantcodes.extentreports.DisplayOrder;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class TestBase extends Variables{
+public class FrameworkBase extends Variables{
 
-	public TestBase testBase;
+	public FrameworkBase fBase;
 
 	@BeforeSuite
 	public void startSuite(ITestContext testContext) 
@@ -233,7 +233,7 @@ public class TestBase extends Variables{
 			int noOfRows = ws.getLastRowNum();
 			// noOfRows = noOfRows+1;
 			for (int i = 1; i <= noOfRows; i++) {
-				testcaseName_Testdata = ws.getRow(i).getCell(0).getStringCellValue();
+				testcaseName_Testdata = ws.getRow(i).getCell(1).getStringCellValue();
 				if (testcaseName_Testdata.equalsIgnoreCase(testName)) {
 					int noOfColumns = ws.getRow(i).getLastCellNum();
 

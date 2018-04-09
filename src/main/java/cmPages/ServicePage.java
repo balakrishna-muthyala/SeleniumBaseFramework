@@ -6,140 +6,140 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import frameworkPackage.TestBase;
+import frameworkPackage.FrameworkBase;
 import frameworkPackage.UtilityClass;
 
-public class ServicePage extends TestBase{
+public class ServicePage extends FrameworkBase{
 
-	public ServicePage(TestBase testBase){
-		this.testBase = testBase;
-		PageFactory.initElements(testBase.driver, this);
+	public ServicePage(FrameworkBase fBase){
+		this.fBase = fBase;
+		PageFactory.initElements(fBase.driver, this);
 	}
 
 	
 	public void serviceConfiguration() throws Exception
 	{
-		UtilityClass util = new UtilityClass(testBase);
+		UtilityClass util = new UtilityClass(fBase);
 		
-		testBase.driver.switchTo().defaultContent();
+		fBase.driver.switchTo().defaultContent();
 
-		testBase.driver.findElement(By.linkText("Service")).click();
+		fBase.driver.findElement(By.linkText("Service")).click();
 		Thread.sleep(2000);
 
-		testBase.driver.switchTo().frame("mainFrame");
+		fBase.driver.switchTo().frame("mainFrame");
 
-		testBase.driver.findElement(By.id("loadAvailProduct")).click();
+		fBase.driver.findElement(By.id("loadAvailProduct")).click();
 
 		
 		//Plan search page
 
-		testBase.driver.findElement(By.name("EDI")).click();
+		fBase.driver.findElement(By.name("EDI")).click();
 
 		//Select Price Plan
-		/*testBase.driver.findElement(By.xpath("//div[text()='EDI']/../following-sibling::td/div/input")).clear();
-		testBase.driver.findElement(By.xpath("//div[text()='EDI']/../following-sibling::td/div/input")).sendKeys("1");*/
+		/*fBase.driver.findElement(By.xpath("//div[text()='EDI']/../following-sibling::td/div/input")).clear();
+		fBase.driver.findElement(By.xpath("//div[text()='EDI']/../following-sibling::td/div/input")).sendKeys("1");*/
 
-		testBase.extentReportsStep("Plan Search Tab Details", "INFO", "YES");		
-		testBase.driver.findElement(By.id("loadSelectedProducts")).click();
+		fBase.extentReportsStep("Plan Search Tab Details", "INFO", "YES");		
+		fBase.driver.findElement(By.id("loadSelectedProducts")).click();
 		Thread.sleep(1000);
 
 		
 		//Feature page
 
-		testBase.extentReportsStep("Feature Tab Details", "INFO", "YES");
-		testBase.driver.findElement(By.id("button_eventId_continue")).click();
+		fBase.extentReportsStep("Feature Tab Details", "INFO", "YES");
+		fBase.driver.findElement(By.id("button_eventId_continue")).click();
 		Thread.sleep(1000);
 		
 
 		//Process page
 
 		//Service
-		Select serviceTerms = new Select(testBase.driver.findElement(By.xpath("//td[text()='Terms']/following-sibling::td/select")));
+		Select serviceTerms = new Select(fBase.driver.findElement(By.xpath("//td[text()='Terms']/following-sibling::td/select")));
 		serviceTerms.selectByVisibleText("1 Month");
 
-		Select ownIPAddress = new Select(testBase.driver.findElement(By.xpath("//td[text()='Customer Bringing Own IP Address']/following-sibling::td/select")));
+		Select ownIPAddress = new Select(fBase.driver.findElement(By.xpath("//td[text()='Customer Bringing Own IP Address']/following-sibling::td/select")));
 		ownIPAddress.selectByVisibleText("Yes");
 
-		testBase.extentReportsStep("Service Details", "INFO", "YES");
+		fBase.extentReportsStep("EDI Details", "INFO", "YES");
 		
-		testBase.driver.findElement(By.id("saveParam")).click();
+		fBase.driver.findElement(By.id("saveParam")).click();
 		Thread.sleep(1000);
 		
-		System.out.println("Service saved in Process page");
+		System.out.println("EDI service details saved in Process page");
 
 		//UNI
-		testBase.driver.findElement(By.xpath("//a[text()='UNI']")).click();
+		fBase.driver.findElement(By.xpath("//a[text()='UNI']")).click();
 		Thread.sleep(1000);
 		
-		Select accessType = new Select(testBase.driver.findElement(By.xpath("//td[text()='Access Type']/following-sibling::td/select")));
+		Select accessType = new Select(fBase.driver.findElement(By.xpath("//td[text()='Access Type']/following-sibling::td/select")));
 		accessType.selectByVisibleText("On-net");
 		
-		testBase.driver.findElement(By.xpath("//img[@alt='Address Lookup']")).click();
+		fBase.driver.findElement(By.xpath("//img[@alt='Address Lookup']")).click();
 
 		//For Automation Env
-		//testBase.driver.switchTo().frame(testBase.driver.findElement(By.xpath("(//iframe[@id='codition'])[2]")));
+		//fBase.driver.switchTo().frame(fBase.driver.findElement(By.xpath("(//iframe[@id='codition'])[2]")));
 
 		//For Hydra Env
-		testBase.driver.switchTo().frame(testBase.driver.findElement(By.xpath("//iframe[@id='codition']")));
+		fBase.driver.switchTo().frame(fBase.driver.findElement(By.xpath("//iframe[@id='codition']")));
 
-		//testBase.driver.switchTo().activeElement();
+		//fBase.driver.switchTo().activeElement();
 
-		testBase.driver.findElement(By.id("addr")).click();
+		fBase.driver.findElement(By.id("addr")).click();
 
-		testBase.driver.findElement(By.id("backToProcess")).click();
+		fBase.driver.findElement(By.id("backToProcess")).click();
 		Thread.sleep(1000);
 		
-		testBase.driver.switchTo().defaultContent();
-		testBase.driver.switchTo().frame("mainFrame");
+		fBase.driver.switchTo().defaultContent();
+		fBase.driver.switchTo().frame("mainFrame");
 
-		testBase.driver.findElement(By.xpath("//input[@id='surClliCom-inputEl']")).sendKeys("xxxxALxxxxx");
+		fBase.driver.findElement(By.xpath("//input[@id='surClliCom-inputEl']")).sendKeys("xxxxALxxxxx");
 
-		testBase.driver.findElement(By.xpath("//input[@paramname='UNI Number']")).sendKeys("1123");
+		fBase.driver.findElement(By.xpath("//input[@paramname='UNI Number']")).sendKeys("1123");
 
-		Select uniPortSpeed = new Select(testBase.driver.findElement(By.xpath("//td[text()='UNI Port Speed']/following-sibling::td/select")));
+		Select uniPortSpeed = new Select(fBase.driver.findElement(By.xpath("//td[text()='UNI Port Speed']/following-sibling::td/select")));
 		uniPortSpeed.selectByVisibleText("1GigE");
 
-		testBase.extentReportsStep("UNI Details", "INFO", "YES");
+		fBase.extentReportsStep("UNI Details", "INFO", "YES");
 		
-		testBase.driver.findElement(By.id("saveParam")).click();
+		fBase.driver.findElement(By.id("saveParam")).click();
 		Thread.sleep(1000);
 
 		System.out.println("UNI saved in Process page");
 
 		//EVC
-		testBase.driver.findElement(By.xpath("//ul[@name='/EDI EVC Configuration/']/li/a")).click();
+		fBase.driver.findElement(By.xpath("//ul[@name='/EDI EVC Configuration/']/li/a")).click();
 		Thread.sleep(1000);
 		
-		testBase.driver.findElement(By.xpath("//td[@id='locZCombo-inputCell']/following-sibling::td/div")).click();
+		fBase.driver.findElement(By.xpath("//td[@id='locZCombo-inputCell']/following-sibling::td/div")).click();
 
-		testBase.driver.findElement(By.xpath("//div[text()='site address']")).click();
+		fBase.driver.findElement(By.xpath("//div[text()='Custom site name']")).click();
 
-		testBase.driver.findElement(By.xpath("//td[text()='EVC Number']/following-sibling::td/input[5]")).sendKeys("4321");
+		fBase.driver.findElement(By.xpath("//td[text()='EVC Number']/following-sibling::td/input[5]")).sendKeys("4321");
 
-		Select basicCoSBandwidth = new Select(testBase.driver.findElement(By.xpath("//select[@paramname='Basic CoS Bandwidth']")));
+		Select basicCoSBandwidth = new Select(fBase.driver.findElement(By.xpath("//select[@paramname='Basic CoS Bandwidth']")));
 		basicCoSBandwidth.selectByVisibleText("1Mbps");
 
-		testBase.extentReportsStep("EVC Details", "INFO", "YES");
+		fBase.extentReportsStep("EVC Details", "INFO", "YES");
 		
-		testBase.driver.findElement(By.id("saveParam")).click();
+		fBase.driver.findElement(By.id("saveParam")).click();
 		Thread.sleep(1000);
 
 		System.out.println("EVC saved in Process page");
 
 		
-		testBase.extentReportsStep("Process Tab Details", "PASS", "YES");
+		fBase.extentReportsStep("Process Tab Details", "PASS", "YES");
 		
-		testBase.driver.findElement(By.id("_eventId_continue")).click();
+		fBase.driver.findElement(By.id("_eventId_continue")).click();
 		Thread.sleep(1000);
 				
 		//Equipment fee site validation
-		testBase.driver.findElement(By.xpath("//span[text()='No']/following-sibling::span")).click();
+		fBase.driver.findElement(By.xpath("//span[text()='No']/following-sibling::span")).click();
 
 		boolean elementExist = util.waitForElement("id", "submitOrder", 10000);
 		
 		if(!elementExist)
 		{
-			testBase.extentReportsStep("Service page configuration", "FAIL", "YES");
+			fBase.extentReportsStep("Service page configuration", "FAIL", "YES");
 		}
 
 		
@@ -151,44 +151,44 @@ public class ServicePage extends TestBase{
 
 	public void orderSummary() throws InterruptedException, IOException
 	{
-		UtilityClass util = new UtilityClass(testBase);
+		UtilityClass util = new UtilityClass(fBase);
 		
-		testBase.driver.findElement(By.xpath("//td[@id='customerOrderSignatureDate-inputCell']")).click();
-		testBase.driver.findElement(By.xpath("//div[@class='x-datepicker-footer']/a/span/span/span/following-sibling::span")).click();
+		fBase.driver.findElement(By.xpath("//td[@id='customerOrderSignatureDate-inputCell']")).click();
+		fBase.driver.findElement(By.xpath("//div[@class='x-datepicker-footer']/a/span/span/span/following-sibling::span")).click();
 
-		Select taxJurisdiction = new Select(testBase.driver.findElement(By.id("taxJurisdiction")));
+		Select taxJurisdiction = new Select(fBase.driver.findElement(By.id("taxJurisdiction")));
 		taxJurisdiction.selectByVisibleText("Interstate");
 
-		Select saleschannel = new Select(testBase.driver.findElement(By.id("saleschannel")));
+		Select saleschannel = new Select(fBase.driver.findElement(By.id("saleschannel")));
 		saleschannel.selectByVisibleText("Enterprise");
 
-		Select soldRegion = new Select(testBase.driver.findElement(By.id("soldRegion")));
+		Select soldRegion = new Select(fBase.driver.findElement(By.id("soldRegion")));
 		soldRegion.selectByVisibleText("All Regions");
 
-		testBase.driver.findElement(By.id("salesforceopportunityid")).sendKeys("1231");
+		fBase.driver.findElement(By.id("salesforceopportunityid")).sendKeys("1231");
 
-		testBase.driver.findElement(By.id("salesOrderNumber")).sendKeys("1232");
+		fBase.driver.findElement(By.id("salesOrderNumber")).sendKeys("1232");
 
-		testBase.driver.findElement(By.id("salesOrderId")).sendKeys("1233");
+		fBase.driver.findElement(By.id("salesOrderId")).sendKeys("1233");
 
-		/*testBase.driver.findElement(By.xpath("//img[@title='Search']")).click();
+		/*fBase.driver.findElement(By.xpath("//img[@title='Search']")).click();
 		Thread.sleep(5000);*/
 
-		testBase.driver.findElement(By.xpath("//td[@id='salesOrderAcceptanceDate-inputCell']/input")).click();
-		testBase.driver.findElement(By.xpath("(//div[@class='x-datepicker-footer'])[2]/a/span/span/span/following-sibling::span")).click();
+		fBase.driver.findElement(By.xpath("//td[@id='salesOrderAcceptanceDate-inputCell']/input")).click();
+		fBase.driver.findElement(By.xpath("(//div[@class='x-datepicker-footer'])[2]/a/span/span/span/following-sibling::span")).click();
 
-		testBase.driver.findElement(By.xpath("//td[@id='salesOrderSubmitDate-inputCell']/input")).click();
-		testBase.driver.findElement(By.xpath("(//div[@class='x-datepicker-footer'])[3]/a/span/span/span/following-sibling::span")).click();
+		fBase.driver.findElement(By.xpath("//td[@id='salesOrderSubmitDate-inputCell']/input")).click();
+		fBase.driver.findElement(By.xpath("(//div[@class='x-datepicker-footer'])[3]/a/span/span/span/following-sibling::span")).click();
 		Thread.sleep(1000);
 		
-		testBase.driver.findElement(By.id("submitOrder")).click();
+		fBase.driver.findElement(By.id("submitOrder")).click();
 		
 		//MRC NRC Pop-up
 		try 
 		{
-			if (testBase.driver.findElement(By.xpath("//div[text()='Are you sure you want to submit the order with $0 NRC/RC?']")).isDisplayed()) 
+			if (fBase.driver.findElement(By.xpath("//div[text()='Are you sure you want to submit the order with $0 NRC/RC?']")).isDisplayed()) 
 			{
-				testBase.driver.findElement(By.xpath("//span[text()='Yes']/following-sibling::span")).click();
+				fBase.driver.findElement(By.xpath("//span[text()='Yes']/following-sibling::span")).click();
 			}
 		}	
 		catch (Exception e)
@@ -201,13 +201,13 @@ public class ServicePage extends TestBase{
 		
 		if(elementExist)
 		{
-			String srid = testBase.driver.findElement(By.xpath("//input[@name='auroraEntityId']/../td[2]")).getText();
-			testBase.extentReportsStep("Order submission - "+srid, "PASS", "YES");
+			String srid = fBase.driver.findElement(By.xpath("//input[@name='auroraEntityId']/../td[2]")).getText();
+			fBase.extentReportsStep("Order submission - "+srid, "PASS", "YES");
 		}
 		else
 		{
 			System.out.println("Order not submitted");
-			testBase.extentReportsStep("Order submission", "FAIL", "YES");
+			fBase.extentReportsStep("Order submission", "FAIL", "YES");
 		}
 		
 		

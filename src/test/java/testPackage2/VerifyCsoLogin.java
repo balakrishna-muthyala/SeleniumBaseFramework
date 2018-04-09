@@ -4,11 +4,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import csoPages.CsoHomePage;
-import frameworkPackage.TestBase;
+import frameworkPackage.FrameworkBase;
 
-public class VerifyCsoLogin extends TestBase
+public class VerifyCsoLogin extends FrameworkBase
 {
-	public TestBase testBase = new TestBase();
+	public FrameworkBase fBase = new FrameworkBase();
 
 	//Constructor to assign the class name to global variable
 	public VerifyCsoLogin()
@@ -19,9 +19,9 @@ public class VerifyCsoLogin extends TestBase
 	@BeforeClass
 	public void beforeTestClass() 
 	{
-		testBase.driver = driver;
-		testBase.testdataHashMap = testdataHashMap;
-		testBase.eTest = eTest;
+		fBase.driver = driver;
+		fBase.testdataHashMap = testdataHashMap;
+		fBase.eTest = eTest;
 	}
 	
 	// Test Methods
@@ -29,13 +29,13 @@ public class VerifyCsoLogin extends TestBase
 	@Test(priority=10)
 	public void openURL_CSO() throws Exception
 	{
-		new CsoHomePage(testBase).openURL_CSO();
+		new CsoHomePage(fBase).openURL_CSO();
 	}
 
 	@Test(priority=20)
 	public void csoLogin() throws Exception
 	{
-		new CsoHomePage(testBase).csoLogin();
+		new CsoHomePage(fBase).csoLogin();
 	}
 	
 	

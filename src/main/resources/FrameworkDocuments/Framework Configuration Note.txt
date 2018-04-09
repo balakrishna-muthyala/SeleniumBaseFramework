@@ -8,10 +8,10 @@ Create all Input resources under src/main/resources to execute run the project
 
 Create all TestNgXml files under src/test/resources to execute the Test cases
 
-Each class has to extends "TestBase". 
+Each class has to extends "FrameworkBase" Class.
 Each Test Class should have constructor for getting the ClassName
-Each Test Class should have @BeforeClass Method for initializing the TestBase object
-Each Page Class should have constructor to access the TestBase object 
+Each Test Class should have @BeforeClass Method for initializing the FrameworkBase object
+Each Page Class should have constructor to access the FrameworkBase object 
 
 Test methods priority is not required, when we include the method names in testNg xml and running from testNg xml (If we give priority, it will consider only priority irrespective of testng xml flow")
 Need to give priorities for test methods in testPackage, when we give only class name in testNg xml
@@ -22,7 +22,7 @@ TestNG Test name = Test data test case name
 TestNG Class name = testPackage java class name
 
  src/main/resources/PropertiesFile for Project configuration variables
- src/main/resources/TestData.xlsx for Test cases test data
+ src/main/resources/TestData.xlsx for Test cases test data. Each Test should have one row in data sheet with TestClass/TestNg <test> name
  src/main/resources/WebDriverFiles for webdriver exe files
 
 <build> tag is important in pom.xml to execute the "suiteXmlFile" from Jenkins
@@ -36,7 +36,7 @@ Project -> Run As -> Maven install : for installing dependency jars from interne
 Note: Always try to use the latest Jars & WebDrivers for the project.
 
 
-- Use the DriverClass (Pojo) to start the batch execution using TestNg, before this fill the DriverSheet with TestNgXml names & Execution Flag. (Without Jenkins) 
+- Use the DriverClass (POJO) to start the batch execution using TestNg, before this fill the DriverSheet with TestNgXml names & Execution Flag. (Without Jenkins) 
 
 Jenkins Job Configuration for Repository Code & Build :
 

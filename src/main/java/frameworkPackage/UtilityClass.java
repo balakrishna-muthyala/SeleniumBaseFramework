@@ -6,11 +6,11 @@ import java.util.Date;
 
 import org.openqa.selenium.By;
 
-public class UtilityClass extends TestBase {
+public class UtilityClass extends FrameworkBase {
 
-	public UtilityClass(TestBase testBase) 
+	public UtilityClass(FrameworkBase fBase) 
 	{
-		this.testBase = testBase;
+		this.fBase = fBase;
 	}
 	
 
@@ -26,20 +26,24 @@ public class UtilityClass extends TestBase {
 
 
 	// Test wait for the expected web element on the page
-	public boolean waitForElement(String locatorName, String locatorValue, int waitTimeInMillisec) throws InterruptedException, IOException 
+	public boolean waitForElement(String locatorType, String locatorValue, int waitTimeInMillisec) throws InterruptedException, IOException 
 	{
 		boolean elementExist = false;
 		int waitIncrement = 0;
 
 		try 
 		{
-			if (locatorName.contains("id")) 
+			if (locatorType.contains("id")) 
 			{
-				elementExist = testBase.driver.findElement(By.id(locatorValue)).isDisplayed();
+				elementExist = fBase.driver.findElement(By.id(locatorValue)).isDisplayed();
 			} 
-			else if (locatorName.contains("xpath")) 
+			else if (locatorType.contains("name")) 
 			{
-				elementExist = testBase.driver.findElement(By.xpath(locatorValue)).isDisplayed();
+				elementExist = fBase.driver.findElement(By.name(locatorValue)).isDisplayed();
+			}
+			else if (locatorType.contains("xpath")) 
+			{
+				elementExist = fBase.driver.findElement(By.xpath(locatorValue)).isDisplayed();
 			}
 		} 
 		catch (Exception e) 
@@ -48,17 +52,26 @@ public class UtilityClass extends TestBase {
 			waitIncrement = 1000;
 		}
 
-		while (!elementExist && waitIncrement <= waitTimeInMillisec) 
+		while (elementExist==false && waitIncrement <= waitTimeInMillisec) 
 		{
 			try 
 			{
-				if (locatorName.contains("id")) 
+				if (locatorType.contains("id")) 
 				{
-					elementExist = testBase.driver.findElement(By.id(locatorValue)).isDisplayed();
+					elementExist = fBase.driver.findElement(By.id(locatorValue)).isDisplayed();
 				} 
-				else if (locatorName.contains("xpath")) 
+				else if (locatorType.contains("name")) 
 				{
-					elementExist = testBase.driver.findElement(By.xpath(locatorValue)).isDisplayed();
+					elementExist = fBase.driver.findElement(By.name(locatorValue)).isDisplayed();
+				}
+				else if (locatorType.contains("xpath")) 
+				{
+					elementExist = fBase.driver.findElement(By.xpath(locatorValue)).isDisplayed();
+				}
+				else
+				{
+					waitIncrement = waitTimeInMillisec+1;
+					System.out.println("Locator Type is not handled");
 				}
 			} 
 			catch (Exception e) 
@@ -70,7 +83,7 @@ public class UtilityClass extends TestBase {
 
 		if (!elementExist) {
 			System.out.println("Element not exist - " + locatorValue.toString());
-			testBase.extentReportsStep("Element not exist - " + locatorValue.toString(), "FAIL", "YES");
+			fBase.extentReportsStep("Element not exist - " + locatorValue.toString(), "INFO", "YES");
 		}
 
 		return elementExist;
@@ -87,7 +100,7 @@ public class UtilityClass extends TestBase {
 
 		try
 		{
-			ActualPageTitle = testBase.driver.getTitle();
+			ActualPageTitle = fBase.driver.getTitle();
 			if (ActualPageTitle.contentEquals(ExpectedPageTitle)) 
 			{
 				pageExist = true;
@@ -104,7 +117,7 @@ public class UtilityClass extends TestBase {
 
 		while (!pageExist && waitIncrement <= waitTimeInMillisec) 
 		{
-			ActualPageTitle = testBase.driver.getTitle();
+			ActualPageTitle = fBase.driver.getTitle();
 			if (ActualPageTitle.contentEquals(ExpectedPageTitle)) 
 			{
 				pageExist = true;
@@ -119,7 +132,7 @@ public class UtilityClass extends TestBase {
 		if (!pageExist) 
 		{
 			System.out.println("Page not loaded - " + ExpectedPageTitle);
-			testBase.extentReportsStep("Page not loaded - " + ExpectedPageTitle, "FAIL", "YES");
+			fBase.extentReportsStep("Page not loaded - " + ExpectedPageTitle, "INFO", "YES");
 		}
 
 		return pageExist;

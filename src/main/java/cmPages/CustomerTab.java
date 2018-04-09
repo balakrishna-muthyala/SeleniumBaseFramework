@@ -4,10 +4,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import frameworkPackage.TestBase;
+import frameworkPackage.FrameworkBase;
 import frameworkPackage.UtilityClass;
 
-public class CustomerTab extends TestBase{
+public class CustomerTab extends FrameworkBase{
 
 	@FindBy(linkText="New Customer") 
 	WebElement linkNewCustomer; 
@@ -64,15 +64,15 @@ public class CustomerTab extends TestBase{
 	WebElement txtSuccessMessage; 
 	
 
-	public CustomerTab(TestBase testBase){
-		this.testBase = testBase;
-		PageFactory.initElements(testBase.driver, this);
+	public CustomerTab(FrameworkBase fBase){
+		this.fBase = fBase;
+		PageFactory.initElements(fBase.driver, this);
 	}
 
 	
 	public  void customerCreation() throws Exception
 	{
-		UtilityClass util = new UtilityClass(testBase);
+		UtilityClass util = new UtilityClass(fBase);
 
 		String customerName = "Cust "+util.generateRandomNumber(7);
 		String salesforceID = "SF "+util.generateRandomNumber(7);
@@ -80,15 +80,15 @@ public class CustomerTab extends TestBase{
 		linkNewCustomer.click();
 		Thread.sleep(2000);
 
-		testBase.driver.switchTo().defaultContent();
-		testBase.driver.switchTo().frame("mainFrame");
-		testBase.driver.switchTo().frame("CustomerFrame");
+		fBase.driver.switchTo().defaultContent();
+		fBase.driver.switchTo().frame("mainFrame");
+		fBase.driver.switchTo().frame("CustomerFrame");
 
 		txtCustomerName.sendKeys(customerName);		
 		txtWorkPhone.sendKeys("");
 		Thread.sleep(1000);
 		
-		txtWorkPhone.sendKeys(testBase.getTestdata("WorkPhone"));
+		txtWorkPhone.sendKeys(fBase.getTestdata("WorkPhone"));
 		
 		txtSalesforceAccountID.sendKeys(salesforceID);
 		
@@ -96,7 +96,7 @@ public class CustomerTab extends TestBase{
 		
 		lstGeneralDelivery.click();
 		
-		txtAddressLine1.sendKeys(testBase.getTestdata("AddressLine1"));
+		txtAddressLine1.sendKeys(fBase.getTestdata("CustomerAddressLine1"));
 		
 		cmbState.click();
 		lstAlabama.click();
@@ -111,13 +111,15 @@ public class CustomerTab extends TestBase{
 		Thread.sleep(1000);
 		
 		btnCreate.click();
-
+		
+		util.waitForElement("name", "disclaimer", 5);
+		
 		try 
 		{
 			if (btnMore.isDisplayed()) 
 			{
 				btnMore.click();
-				testBase.driver.switchTo().frame("codition");
+				fBase.driver.switchTo().frame("codition");
 				chkIAgree.click();
 				btnContinue.click();
 			}
@@ -127,59 +129,59 @@ public class CustomerTab extends TestBase{
 			System.err.println("more button is not displayed due to known Address ");
 		}
 
-		testBase.driver.switchTo().defaultContent();
-		testBase.driver.switchTo().frame("mainFrame");
-		testBase.driver.switchTo().frame("CustomerFrame");
+		fBase.driver.switchTo().defaultContent();
+		fBase.driver.switchTo().frame("mainFrame");
+		fBase.driver.switchTo().frame("CustomerFrame");
 
 		String custSuccessMessage = txtSuccessMessage.getText();
 
 		if (custSuccessMessage.contains(customerName)) 
 		{
-			testBase.extentReportsStep("Customer creation", "PASS", "YES");
+			fBase.extentReportsStep("Customer creation", "PASS", "YES");
 		}
 		else
 		{
-			testBase.extentReportsStep("Customer creation", "FAIL", "YES");
+			fBase.extentReportsStep("Customer creation", "FAIL", "YES");
 		}
 
 		/*		
-		testBase.driver.findElement(By.linkText("New Customer")).click();
+		fBase.driver.findElement(By.linkText("New Customer")).click();
 		Thread.sleep(5000);
 
-		testBase.driver.switchTo().defaultContent();
-		testBase.driver.switchTo().frame("mainFrame");
-		testBase.driver.switchTo().frame("CustomerFrame");
+		fBase.driver.switchTo().defaultContent();
+		fBase.driver.switchTo().frame("mainFrame");
+		fBase.driver.switchTo().frame("CustomerFrame");
 
-		testBase.driver.findElement(By.id("busiCustBean.businessName")).sendKeys(customerName);
-		// testBase.driver.findElement(By.xpath("//div[@id='Customer']/div")).sendKeys("Cust234");
-		testBase.driver.findElement(By.name("busiCustBean.busiWorkPhone1")).sendKeys("");
-		testBase.driver.findElement(By.name("busiCustBean.busiWorkPhone1")).sendKeys("7689076578");
-		testBase.driver.findElement(By.xpath("//td[@id='sfAccIdLabel']/following-sibling::td/input")).sendKeys(sfAccountId);
-		testBase.driver.findElement(By.xpath("//td[@id='cmb-comboAddressFormatType-inputCell']/following-sibling::td/div")).click();
-		testBase.driver.findElement(By.xpath("(//ul[@class='x-list-plain'])/li[text()='General Delivery']")).click();
-		testBase.driver.findElement(By.name("addrBean.addrGDBean.addrsLine1")).sendKeys("JKLD Cross street 4");
-		testBase.driver.findElement(By.xpath("//td[@id='CmbGDstate-inputCell']/following-sibling::td/div")).click();
-		testBase.driver.findElement(By.xpath("(//ul[@class='x-list-plain'])/li[text()='Alabama']")).click();
+		fBase.driver.findElement(By.id("busiCustBean.businessName")).sendKeys(customerName);
+		// fBase.driver.findElement(By.xpath("//div[@id='Customer']/div")).sendKeys("Cust234");
+		fBase.driver.findElement(By.name("busiCustBean.busiWorkPhone1")).sendKeys("");
+		fBase.driver.findElement(By.name("busiCustBean.busiWorkPhone1")).sendKeys("7689076578");
+		fBase.driver.findElement(By.xpath("//td[@id='sfAccIdLabel']/following-sibling::td/input")).sendKeys(sfAccountId);
+		fBase.driver.findElement(By.xpath("//td[@id='cmb-comboAddressFormatType-inputCell']/following-sibling::td/div")).click();
+		fBase.driver.findElement(By.xpath("(//ul[@class='x-list-plain'])/li[text()='General Delivery']")).click();
+		fBase.driver.findElement(By.name("addrBean.addrGDBean.addrsLine1")).sendKeys("JKLD Cross street 4");
+		fBase.driver.findElement(By.xpath("//td[@id='CmbGDstate-inputCell']/following-sibling::td/div")).click();
+		fBase.driver.findElement(By.xpath("(//ul[@class='x-list-plain'])/li[text()='Alabama']")).click();
 		Thread.sleep(1000);
-		testBase.driver.findElement(By.xpath("//td[@id='CmbGDcity-inputCell']/following-sibling::td/div")).click();
-		testBase.driver.findElement(By.xpath("//li[text()='Abbeville']")).click();
+		fBase.driver.findElement(By.xpath("//td[@id='CmbGDcity-inputCell']/following-sibling::td/div")).click();
+		fBase.driver.findElement(By.xpath("//li[text()='Abbeville']")).click();
 		Thread.sleep(1000);
-		testBase.driver.findElement(By.xpath("//td[@id='CmbGDzipcode-inputCell']/following-sibling::td/div")).click();
-		testBase.driver.findElement(By.xpath("//li[text()='36310']")).click();
+		fBase.driver.findElement(By.xpath("//td[@id='CmbGDzipcode-inputCell']/following-sibling::td/div")).click();
+		fBase.driver.findElement(By.xpath("//li[text()='36310']")).click();
 		Thread.sleep(1000);
-		testBase.driver.findElement(By.id("_eventId_createCusotmer")).click();
+		fBase.driver.findElement(By.id("_eventId_createCusotmer")).click();
 		Thread.sleep(5000);
 
 
 		try 
 		{
-			if (testBase.driver.findElement(By.name("disclaimer")).isDisplayed()) 
+			if (fBase.driver.findElement(By.name("disclaimer")).isDisplayed()) 
 			{
-				testBase.driver.findElement(By.name("disclaimer")).click();
+				fBase.driver.findElement(By.name("disclaimer")).click();
 
-				testBase.driver.switchTo().frame("codition");
-				testBase.driver.findElement(By.name("diclaimercheck")).click();
-				testBase.driver.findElement(By.name("createSiteaddress")).click();
+				fBase.driver.switchTo().frame("codition");
+				fBase.driver.findElement(By.name("diclaimercheck")).click();
+				fBase.driver.findElement(By.name("createSiteaddress")).click();
 				Thread.sleep(5000);
 			}
 		} 
@@ -188,11 +190,11 @@ public class CustomerTab extends TestBase{
 			//e.printStackTrace();
 		}
 
-		testBase.driver.switchTo().defaultContent();
-		testBase.driver.switchTo().frame("mainFrame");
-		testBase.driver.switchTo().frame("CustomerFrame");
+		fBase.driver.switchTo().defaultContent();
+		fBase.driver.switchTo().frame("mainFrame");
+		fBase.driver.switchTo().frame("CustomerFrame");
 
-		String custSuccessMessage = testBase.driver.findElement(By.id("message")).getText();
+		String custSuccessMessage = fBase.driver.findElement(By.id("message")).getText();
 		System.out.println(custSuccessMessage);
 
 		if (custSuccessMessage.contains(customerName)) 
