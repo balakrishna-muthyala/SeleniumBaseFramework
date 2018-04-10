@@ -38,7 +38,7 @@ Note: Always try to use the latest Jars & WebDrivers for the project.
 
 - Use the DriverClass (POJO) to start the batch execution using TestNg, before this fill the DriverSheet with TestNgXml names & Execution Flag. (Without Jenkins) 
 
-Jenkins Job Configuration for Repository Code & Build :
+- Jenkins Job Configuration for Repository Code & Build :
 
 	-Git SourceCodeManagement: Repository URL -> https://github.com/balakrishna-muthyala/SeleniumBaseFramework
 
@@ -47,4 +47,8 @@ Jenkins Job Configuration for Repository Code & Build :
 
 	-Build: Goals and options -> test "-DsuiteXmlFile=src/test/resources/VerifyCmLogin.xml"
 
-
+- Eclipse Configuration: 
+	- Install "TestNG for Eclipse", "Maven Integration for Eclipse" from Eclipse Marketplace to run TestNG & Maven Projects.
+	- If we want to change ".m2" repository location, go to Window-> Preference-> Maven-> User Settings->Global Settings: 
+		give the "settings.xml" file location inside apche-maven folder (Eg: "C:\apache-maven-3.3.9\conf\settings.xml"), which points the "localRepository" inside the xml file.
+	
