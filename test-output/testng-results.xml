@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="VerifyCmLogin" duration-ms="26039" started-at="2018-04-10T07:32:48Z" finished-at="2018-04-10T07:33:14Z">
+  <suite name="VerifyCmLogin" duration-ms="25758" started-at="2018-04-10T11:45:19Z" finished-at="2018-04-10T11:45:44Z">
     <groups>
     </groups>
-    <test name="VerifyCmLogin" duration-ms="26039" started-at="2018-04-10T07:32:48Z" finished-at="2018-04-10T07:33:14Z">
+    <test name="VerifyCmLogin" duration-ms="25758" started-at="2018-04-10T11:45:19Z" finished-at="2018-04-10T11:45:44Z">
       <class name="testPackage2.VerifyCmLogin">
-        <test-method status="PASS" signature="startSuite(org.testng.ITestContext)[pri:0, instance:testPackage2.VerifyCmLogin@18be83e4]" name="startSuite" is-config="true" duration-ms="183" started-at="2018-04-10T13:02:47Z" finished-at="2018-04-10T13:02:48Z">
+        <test-method status="PASS" signature="startSuite(org.testng.ITestContext)[pri:0, instance:testPackage2.VerifyCmLogin@4b9e13df]" name="startSuite" is-config="true" duration-ms="140" started-at="2018-04-10T17:15:19Z" finished-at="2018-04-10T17:15:19Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSuite -->
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:testPackage2.VerifyCmLogin@18be83e4]" name="startTest" is-config="true" duration-ms="18274" started-at="2018-04-10T13:02:48Z" finished-at="2018-04-10T13:03:06Z">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:testPackage2.VerifyCmLogin@4b9e13df]" name="startTest" is-config="true" duration-ms="18324" started-at="2018-04-10T17:15:19Z" finished-at="2018-04-10T17:15:37Z">
           <params>
             <param index="0">
               <value>
@@ -29,11 +29,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:testPackage2.VerifyCmLogin@18be83e4]" name="beforeTestClass" is-config="true" duration-ms="10" started-at="2018-04-10T13:03:06Z" finished-at="2018-04-10T13:03:06Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:testPackage2.VerifyCmLogin@4b9e13df]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2018-04-10T17:15:37Z" finished-at="2018-04-10T17:15:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyCmLogin@18be83e4]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-10T13:03:06Z" finished-at="2018-04-10T13:03:06Z">
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyCmLogin@4b9e13df]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-10T17:15:37Z" finished-at="2018-04-10T17:15:37Z">
           <params>
             <param index="0">
               <value>
@@ -44,15 +44,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="openURL_CM()[pri:10, instance:testPackage2.VerifyCmLogin@18be83e4]" name="openURL_CM" duration-ms="5515" started-at="2018-04-10T13:03:06Z" finished-at="2018-04-10T13:03:11Z">
+        <test-method status="PASS" signature="openURL_CM()[pri:10, instance:testPackage2.VerifyCmLogin@4b9e13df]" name="openURL_CM" duration-ms="5536" started-at="2018-04-10T17:15:37Z" finished-at="2018-04-10T17:15:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openURL_CM -->
-        <test-method status="PASS" signature="cmLogin()[pri:20, instance:testPackage2.VerifyCmLogin@18be83e4]" name="cmLogin" duration-ms="2213" started-at="2018-04-10T13:03:11Z" finished-at="2018-04-10T13:03:14Z">
+        <test-method status="PASS" signature="cmLogin()[pri:20, instance:testPackage2.VerifyCmLogin@4b9e13df]" name="cmLogin" duration-ms="1882" started-at="2018-04-10T17:15:43Z" finished-at="2018-04-10T17:15:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cmLogin -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyCmLogin@18be83e4]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-10T13:03:11Z" finished-at="2018-04-10T13:03:11Z">
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:testPackage2.VerifyCmLogin@4b9e13df]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-04-10T17:15:43Z" finished-at="2018-04-10T17:15:43Z">
           <params>
             <param index="0">
               <value>
@@ -63,33 +63,33 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyCmLogin@18be83e4]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-10T13:03:11Z" finished-at="2018-04-10T13:03:11Z">
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyCmLogin@4b9e13df]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-10T17:15:43Z" finished-at="2018-04-10T17:15:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=openURL_CM status=SUCCESS method=VerifyCmLogin.openURL_CM()[pri:10, instance:testPackage2.VerifyCmLogin@18be83e4] output={null}]]]>
+                <![CDATA[[TestResult name=openURL_CM status=SUCCESS method=VerifyCmLogin.openURL_CM()[pri:10, instance:testPackage2.VerifyCmLogin@4b9e13df] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:testPackage2.VerifyCmLogin@18be83e4]" name="endTest" is-config="true" duration-ms="4" started-at="2018-04-10T13:03:14Z" finished-at="2018-04-10T13:03:14Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:testPackage2.VerifyCmLogin@4b9e13df]" name="endTest" is-config="true" duration-ms="3" started-at="2018-04-10T17:15:44Z" finished-at="2018-04-10T17:15:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyCmLogin@18be83e4]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-10T13:03:14Z" finished-at="2018-04-10T13:03:14Z">
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:testPackage2.VerifyCmLogin@4b9e13df]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-04-10T17:15:44Z" finished-at="2018-04-10T17:15:44Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cmLogin status=SUCCESS method=VerifyCmLogin.cmLogin()[pri:20, instance:testPackage2.VerifyCmLogin@18be83e4] output={null}]]]>
+                <![CDATA[[TestResult name=cmLogin status=SUCCESS method=VerifyCmLogin.cmLogin()[pri:20, instance:testPackage2.VerifyCmLogin@4b9e13df] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:testPackage2.VerifyCmLogin@18be83e4]" name="endSuite" is-config="true" duration-ms="376" started-at="2018-04-10T13:03:14Z" finished-at="2018-04-10T13:03:14Z">
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:testPackage2.VerifyCmLogin@4b9e13df]" name="endSuite" is-config="true" duration-ms="384" started-at="2018-04-10T17:15:44Z" finished-at="2018-04-10T17:15:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSuite -->
