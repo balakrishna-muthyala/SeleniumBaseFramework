@@ -11,11 +11,16 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.TestNG;
 import org.testng.annotations.Test;
 
-@Test
+
 public class DriverClass 
 {
+	@Test
 	public void DriverMethod() throws IOException
 	{
+		
+		System.out.println("hi");
+		
+		/*
 		//Project Location
 		String projectLocationPath = System.getProperty("user.dir");
 		
@@ -58,7 +63,8 @@ public class DriverClass
 
 		runner.setTestSuites(suiteFiles);
 		runner.run();
-
+*/
+		
 	}    
 	
 }
