@@ -180,8 +180,6 @@ public class FrameworkBase extends Variables{
 	}
 
 
-	/************************************************************************************************************************/
-
 
 	// Driver Initialization 
 	@SuppressWarnings("deprecation")
