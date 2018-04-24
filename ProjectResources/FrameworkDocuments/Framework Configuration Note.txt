@@ -1,3 +1,4 @@
+Download "apache-maven-3.3.9" and place it in "C" drive.
 
 Create all Framework related classes&methods in "FrameworkPackage" under src/main/java 
 Create all application classes&methods in Application packages ( 1 class file for 1 page in package) under src/main/java 
@@ -35,7 +36,7 @@ Project -> Run As -> Maven install : for installing dependency jars from interne
 Use the DriverClass (POJO) to start the batch execution using TestNg, before this fill the DriverSheet with TestNgXml names & Execution Flag. (Without Jenkins) 
 
 -	Jenkins Job Configuration for Repository Code & Build :
-	-	Git SourceCodeManagement: Repository URL -> https://github.com/balakrishna-muthyala/SeleniumBaseFramework
+	-	Git SourceCodeManagement: Repository URL -> https://github.com/balumuthyala/SeleniumBaseFramework
 	-	Root POM for Local Code Build: F:\SELENIUM\selenium-projects\SeleniumBaseFramework\pom.xml
 	-	Root POM for Remote Code Build: pom.xml
 	-	Build: Goals and options -> test "-DsuiteXmlFile=TestCaseRunner/VerifyCmLogin.xml"
