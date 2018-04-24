@@ -162,7 +162,8 @@ public class FrameworkBase extends Variables{
 		System.out.println(suiteName + " - TestSuite execution completed");
 
 		// If execution starts from Jenkins, "jenkinsBuildReportFileLocation" folder will be created automatically
-		String jenkinsBuildReportFile = jenkinsWorkspacePath + "\\" + projectName + "-" + suiteName + "\\" + "\\" + "TestExtentReports.html";
+		String itemFullName = projectName + "-" + suiteName ;
+		String jenkinsBuildReportFile = jenkinsWorkspacePath + "\\" + itemFullName + "\\" + "TestExtentReports.html";
 		File extentReportFile = new File(testReportFile);
 		File jenkinsBuildReportFileLocation = new File(jenkinsBuildReportFile);
 		try {

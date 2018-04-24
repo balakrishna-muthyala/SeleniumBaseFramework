@@ -18,7 +18,7 @@ public class Variables {
 	
 	//Test Reports Path
 	public String executionReportsFolder = "C:\\SELENIUM_ExecutionReports";
-	public String jenkinsWorkspacePath = "C:\\Users\\balakrishna.m\\.jenkins\\workspace";
+	public String jenkinsWorkspacePath = "C:\\JenkinsWorkspace";
 
 	//Test inputs path
 	protected static String testDataPath = projectLocation+"\\ProjectResources\\TestData.xlsx";

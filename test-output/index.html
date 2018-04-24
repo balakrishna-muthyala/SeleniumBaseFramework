@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-VerifyCmLogin">
-                    <span>F:\SELENIUM\selenium-projects\SeleniumBaseFramework\TestCaseRunner\VerifyCmLogin.xml</span>
+                    <span>F:\SELENIUM\selenium-projects\SeleniumBaseFramework\TestCaseRunner\VerifyCmLoginWithListeners.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -147,13 +147,16 @@
         </div> <!-- panel VerifyCmLogin -->
         <div panel-name="test-xml-VerifyCmLogin" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">F:\SELENIUM\selenium-projects\SeleniumBaseFramework\TestCaseRunner\VerifyCmLogin.xml</span>
+            <span class="header-content">F:\SELENIUM\selenium-projects\SeleniumBaseFramework\TestCaseRunner\VerifyCmLoginWithListeners.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;VerifyCmLogin&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;frameworkPackage.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test name=&quot;VerifyCmLogin&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testPackage2.VerifyCmLogin&quot;/&gt;
@@ -200,16 +203,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'openURL_CM')
 data.setCell(0, 2, 'testPackage2.VerifyCmLogin')
-data.setCell(0, 3, 5555);
+data.setCell(0, 3, 5527);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'cmLogin')
 data.setCell(1, 2, 'testPackage2.VerifyCmLogin')
-data.setCell(1, 3, 2800);
+data.setCell(1, 3, 2362);
 window.suiteTableData['VerifyCmLogin']= { tableData: data, tableDiv: 'times-div-VerifyCmLogin'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-VerifyCmLogin">
               </div> <!-- times-div-VerifyCmLogin -->
             </div> <!-- times-div -->
@@ -220,6 +223,32 @@ return data;
             <span class="header-content">Reporter output for VerifyCmLogin</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">openURL_CM</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Returning Method name</span>
+                <span class="reporter-method-output">About to begin executing following method : VerifyCmLogin.openURL_CM</span>
+                <span class="reporter-method-output">Returning Method name</span>
+                <span class="reporter-method-output">Completed executing following method : VerifyCmLogin.openURL_CM</span>
+                <span class="reporter-method-output">Test Method resides in testPackage2.VerifyCmLogin</span>
+                <span class="reporter-method-output">Test Status: Pass</span>
+                <span class="reporter-method-output">Returning Method name</span>
+                <span class="reporter-method-output">About to begin executing following method : FrameworkBase.endMethod</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">cmLogin</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Returning Method name</span>
+                <span class="reporter-method-output">About to begin executing following method : VerifyCmLogin.cmLogin</span>
+                <span class="reporter-method-output">Returning Method name</span>
+                <span class="reporter-method-output">Completed executing following method : VerifyCmLogin.cmLogin</span>
+                <span class="reporter-method-output">Test Method resides in testPackage2.VerifyCmLogin</span>
+                <span class="reporter-method-output">Test Status: Pass</span>
+                <span class="reporter-method-output">Returning Method name</span>
+                <span class="reporter-method-output">About to begin executing following method : FrameworkBase.endMethod</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-VerifyCmLogin" class="panel">
@@ -237,48 +266,48 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testPackage2.VerifyCmLogin</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">startSuite(org.testng.TestRunner@475835b1)</span>
+                <span class="method-name">startSuite(org.testng.TestRunner@191ae03f)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
-                <span class="method-name">startTest(org.testng.TestRunner@475835b1)</span>
-                <span class="method-start">149 ms</span>
+                <span class="method-name">startTest(org.testng.TestRunner@191ae03f)</span>
+                <span class="method-start">153 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeTestClass</span>
-                <span class="method-start">21434 ms</span>
+                <span class="method-start">17924 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">openURL_CM</span>
-                <span class="method-start">21443 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">startMethod(public void testPackage2.VerifyCmLogin.openURL_CM() throws java.lang.Exception)</span>
-                <span class="method-start">21443 ms</span>
+                <span class="method-start">17938 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">openURL_CM</span>
+                <span class="method-start">17938 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">endMethod([TestResult name=openURL_CM status=SUCCESS method=VerifyCmLogin.openURL_CM()[pri:10, instance:testPa...)</span>
-                <span class="method-start">26999 ms</span>
+                <span class="method-start">23467 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">cmLogin</span>
-                <span class="method-start">27002 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">startMethod(public void testPackage2.VerifyCmLogin.cmLogin() throws java.lang.Exception)</span>
-                <span class="method-start">27002 ms</span>
+                <span class="method-start">23470 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">cmLogin</span>
+                <span class="method-start">23470 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">endMethod([TestResult name=cmLogin status=SUCCESS method=VerifyCmLogin.cmLogin()[pri:20, instance:testPackage2...)</span>
-                <span class="method-start">29804 ms</span>
+                <span class="method-start">25834 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">endTest</span>
-                <span class="method-start">29804 ms</span>
+                <span class="method-start">25834 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">endSuite</span>
-                <span class="method-start">29852 ms</span>
+                <span class="method-start">25875 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
