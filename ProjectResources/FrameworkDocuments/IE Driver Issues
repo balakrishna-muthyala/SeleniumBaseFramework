@@ -1,20 +1,20 @@
 
 selenium-webdriver-typing-very-slow-in-text-field-on-ie-browser :
 
-
 For 64 bit WebDriver:
 1. Open IE
-2. Go to Internet Options → Advanced → Security
-3. Check ☑ Enable Enhanced Protected Mode
+2. Go to Internet Options -> Advanced -> Security
+3. Check the box, Enable Enhanced Protected Mode
 4. Click Apply and OK
 
 
 For 32 bit WebDriver:
 1. Open IE
-2. Go to Internet Options → Advanced → Security
-3. Uncheck ☐ Enable Enhanced Protected Mode
+2. Go to Internet Options -> Advanced -> Security
+3. Uncheck the box, Enable Enhanced Protected Mode
 4. Click Apply and OK
 
+(or)
 
 Otherwise add the below code while opening the IE driver:
 

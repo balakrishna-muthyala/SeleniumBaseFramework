@@ -1,4 +1,3 @@
-Download "apache-maven-3.3.9" and place it in "C" drive.
 
 Create all Framework related classes&methods in "FrameworkPackage" under src/main/java 
 Create all application classes&methods in Application packages ( 1 class file for 1 page in package) under src/main/java 
@@ -33,7 +32,7 @@ ProjectResources/WebDriverFiles for WebDriver exe files
 Project -> Maven -> Update Project : for all changes in project level like manually placing jars in .m2 (or) any changes made in pom.xml
 Project -> Run As -> Maven install : for installing dependency jars from internet (by taking pom.xml reference) into .m2 repository
 
-Use the DriverClass (POJO) to start the batch execution using TestNg, before this fill the DriverSheet with TestNgXml names & Execution Flag. (Without Jenkins) 
+Use the DriverClass (POJO) to start the batch execution using TestNg. First fill the DriverSheet with TestNgXml names & Execution Flag. (Without using Jenkins) 
 
 -	Jenkins Job Configuration for Repository Code & Build :
 	-	Git SourceCodeManagement: Repository URL -> https://github.com/balumuthyala/SeleniumBaseFramework
