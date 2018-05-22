@@ -19,6 +19,7 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.os.WindowsUtils;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -150,6 +151,11 @@ public class FrameworkBase extends Variables{
 		System.out.println(testName + " - TestCase execution completed");
 
 		//driver.close();
+		
+		WindowsUtils.killByName("chromedriver.exe");
+		/*WindowsUtils.killByName("geckodriver.exe");
+		WindowsUtils.killByName("IEDriverServer.exe");*/
+
 	}
 
 
@@ -171,17 +177,14 @@ public class FrameworkBase extends Variables{
 		} catch (IOException e) {
 			System.err.println("Jenkins build workspace location is not identified");
 		}
-
-		/*
-		 * WindowsUtils.killByName("IEDriverServer.exe");
-		 * WindowsUtils.killByName("chromedriver.exe");
-		 * WindowsUtils.killByName("geckodriver.exe");
-		 */
+		///////////
 
 	}
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	// Base Framework methods to maintain the project
 
 	// Driver Initialization 
 	@SuppressWarnings("deprecation")
@@ -276,7 +279,7 @@ public class FrameworkBase extends Variables{
 		return columnValue;
 	}
 
-	
+
 	// Read and store the data from Properties file
 	public void readPropertiesFile() 
 	{
@@ -323,7 +326,7 @@ public class FrameworkBase extends Variables{
 		return screenshotFile;
 	}
 
-	
+
 	// Each and every Test step report placed in the Extent Reports 
 	public void extentReportsStep(String stepName, String stepStatus, String ssRequired) throws IOException, InterruptedException 
 	{
@@ -363,3 +366,6 @@ public class FrameworkBase extends Variables{
 
 
 }
+
+
+

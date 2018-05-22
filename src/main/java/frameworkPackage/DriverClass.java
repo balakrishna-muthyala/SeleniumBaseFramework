@@ -20,10 +20,10 @@ public class DriverClass
 		String projectLocationPath = System.getProperty("user.dir");
 		
 		//Driver Sheet Path
-		String driverSheetPath = projectLocationPath+"\\ProjectResources\\DriverSheet.xlsx";
+		String driverSheetPath = projectLocationPath+"\\TestResources\\DriverSheet.xlsx";
 		
 		//TestNg Xmls Location in Project
-		String testNgXmlsLocation = projectLocationPath+"\\TestCaseRunner";
+		String testNgXmlsLocation = projectLocationPath+"\\TestRunner";
 		
 		List<String> suiteFiles=new ArrayList<String>();
 		TestNG runner=new TestNG();

@@ -12,8 +12,8 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="ProjectResources"/>
-	<classpathentry kind="src" path="TestCaseRunner"/>
+	<classpathentry kind="src" path="TestResources"/>
+	<classpathentry kind="src" path="TestRunner"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

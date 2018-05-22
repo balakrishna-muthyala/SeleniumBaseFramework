@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [VerifyOrderSubmission]">
+  <test name="VerifyOrderSubmission(failed)">
+    <classes>
+      <class name="centuryOrderCreation.VerifyOrderSubmission">
+        <methods>
+          <include name="addressCreation"/>
+          <include name="startMethod"/>
+          <include name="endMethod"/>
+          <include name="orderSummary"/>
+          <include name="address_SiteTechnicalContact"/>
+          <include name="startTest"/>
+          <include name="beforeTestClass"/>
+          <include name="endTest"/>
+          <include name="endSuite"/>
+          <include name="serviceConfiguration"/>
+          <include name="startSuite"/>
+        </methods>
+      </class> <!-- centuryOrderCreation.VerifyOrderSubmission -->
+    </classes>
+  </test> <!-- VerifyOrderSubmission(failed) -->
+</suite> <!-- Failed suite [VerifyOrderSubmission] -->

@@ -21,12 +21,12 @@ public class Variables {
 	public String jenkinsWorkspacePath = "C:\\JenkinsWorkspace";
 
 	//Test inputs path
-	protected static String testDataPath = projectLocation+"\\ProjectResources\\TestData.xlsx";
-	protected static String propertiesFilePath = projectLocation+"\\ProjectResources\\PropertiesFile";
+	protected static String testDataPath = projectLocation+"\\TestResources\\TestData.xlsx";
+	protected static String propertiesFilePath = projectLocation+"\\TestResources\\PropertiesFile";
 
-	public static String ieDriverPath = projectLocation+"\\ProjectResources\\WebDriverFiles\\IEDriverServer.exe";
-	public static String chromeDriverPath = projectLocation+"\\ProjectResources\\WebDriverFiles\\chromedriver.exe";
-	public static String firefoxDriverPath = projectLocation+"\\ProjectResources\\WebDriverFiles\\geckodriver.exe";
+	public static String ieDriverPath = projectLocation+"\\TestResources\\WebDriverFiles\\IEDriverServer.exe";
+	public static String chromeDriverPath = projectLocation+"\\TestResources\\WebDriverFiles\\chromedriver.exe";
+	public static String firefoxDriverPath = projectLocation+"\\TestResources\\WebDriverFiles\\geckodriver.exe";
 
 	//Config property file variables
 	public static String browserName;
