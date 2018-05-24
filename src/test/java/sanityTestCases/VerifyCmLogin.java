@@ -34,11 +34,11 @@ public class VerifyCmLogin extends FrameworkBase
 		new CmHomePage(fBase).openURL_CM();		
 	}
 	
-	/*@Test(priority=20)
+	@Test(priority=20)
 	public void cmLogin() throws Exception
 	{
 		new CmHomePage(fBase).cmLogin();		
-	}*/
+	}
 	
 	
 	/*public void verifyCmLogin() throws Exception
