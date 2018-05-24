@@ -1,333 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="VerifyOrderSubmission" duration-ms="128493" started-at="2018-05-24T10:04:49Z" finished-at="2018-05-24T10:06:57Z">
+  <suite name="VerifyCmLogin" duration-ms="40665" started-at="2018-05-24T13:50:02Z" finished-at="2018-05-24T13:50:43Z">
     <groups>
     </groups>
-    <test name="VerifyOrderSubmission" duration-ms="128493" started-at="2018-05-24T10:04:49Z" finished-at="2018-05-24T10:06:57Z">
-      <class name="centuryOrderCreation.VerifyOrderSubmission">
-        <test-method status="PASS" signature="startSuite(org.testng.ITestContext)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startSuite" is-config="true" duration-ms="113" started-at="2018-05-24T15:34:49Z" finished-at="2018-05-24T15:34:49Z">
+    <test name="VerifyCmLogin" duration-ms="40665" started-at="2018-05-24T13:50:02Z" finished-at="2018-05-24T13:50:43Z">
+      <class name="sanityTestCases.VerifyCmLogin">
+        <test-method status="PASS" signature="startSuite(org.testng.ITestContext)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="startSuite" is-config="true" duration-ms="112" started-at="2018-05-24T19:20:02Z" finished-at="2018-05-24T19:20:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@532a02d9]]>
+                <![CDATA[org.testng.TestRunner@591e58fa]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSuite -->
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startTest" is-config="true" duration-ms="35748" started-at="2018-05-24T15:34:49Z" finished-at="2018-05-24T15:35:24Z">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="startTest" is-config="true" duration-ms="32627" started-at="2018-05-24T19:20:02Z" finished-at="2018-05-24T19:20:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@532a02d9]]>
+                <![CDATA[org.testng.TestRunner@591e58fa]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2018-05-24T15:35:24Z" finished-at="2018-05-24T15:35:24Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2018-05-24T19:20:35Z" finished-at="2018-05-24T19:20:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:35:24Z" finished-at="2018-05-24T15:35:24Z">
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T19:20:35Z" finished-at="2018-05-24T19:20:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void centuryOrderCreation.VerifyOrderSubmission.openURL_CM() throws java.lang.Exception]]>
+                <![CDATA[public void sanityTestCases.VerifyCmLogin.openURL_CM() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="openURL_CM()[pri:10, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="openURL_CM" duration-ms="5641" started-at="2018-05-24T15:35:24Z" finished-at="2018-05-24T15:35:30Z">
+        <test-method status="PASS" signature="openURL_CM()[pri:10, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="openURL_CM" duration-ms="5531" started-at="2018-05-24T19:20:35Z" finished-at="2018-05-24T19:20:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openURL_CM -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:35:30Z" finished-at="2018-05-24T15:35:30Z">
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="endMethod" is-config="true" duration-ms="1" started-at="2018-05-24T19:20:40Z" finished-at="2018-05-24T19:20:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=openURL_CM status=SUCCESS method=VerifyOrderSubmission.openURL_CM()[pri:10, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822] output={null}]]]>
+                <![CDATA[[TestResult name=openURL_CM status=SUCCESS method=VerifyCmLogin.openURL_CM()[pri:10, instance:sanityTestCases.VerifyCmLogin@18be83e4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:35:30Z" finished-at="2018-05-24T15:35:30Z">
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T19:20:40Z" finished-at="2018-05-24T19:20:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void centuryOrderCreation.VerifyOrderSubmission.cmLogin() throws java.lang.Exception]]>
+                <![CDATA[public void sanityTestCases.VerifyCmLogin.cmLogin() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="cmLogin()[pri:20, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="cmLogin" duration-ms="2549" started-at="2018-05-24T15:35:30Z" finished-at="2018-05-24T15:35:33Z">
+        <test-method status="PASS" signature="cmLogin()[pri:20, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="cmLogin" duration-ms="2163" started-at="2018-05-24T19:20:40Z" finished-at="2018-05-24T19:20:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cmLogin -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endMethod" is-config="true" duration-ms="1" started-at="2018-05-24T15:35:33Z" finished-at="2018-05-24T15:35:33Z">
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T19:20:42Z" finished-at="2018-05-24T19:20:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cmLogin status=SUCCESS method=VerifyOrderSubmission.cmLogin()[pri:20, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822] output={null}]]]>
+                <![CDATA[[TestResult name=cmLogin status=SUCCESS method=VerifyCmLogin.cmLogin()[pri:20, instance:sanityTestCases.VerifyCmLogin@18be83e4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startMethod" is-config="true" duration-ms="1" started-at="2018-05-24T15:35:33Z" finished-at="2018-05-24T15:35:33Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void centuryOrderCreation.VerifyOrderSubmission.customerCreation() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="customerCreation()[pri:30, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="customerCreation" duration-ms="15696" started-at="2018-05-24T15:35:33Z" finished-at="2018-05-24T15:35:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- customerCreation -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endMethod" is-config="true" duration-ms="1" started-at="2018-05-24T15:35:48Z" finished-at="2018-05-24T15:35:48Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=customerCreation status=SUCCESS method=VerifyOrderSubmission.customerCreation()[pri:30, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="accountCreation_Service()[pri:40, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="accountCreation_Service" duration-ms="5417" started-at="2018-05-24T15:35:48Z" finished-at="2018-05-24T15:35:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accountCreation_Service -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:35:48Z" finished-at="2018-05-24T15:35:48Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void centuryOrderCreation.VerifyOrderSubmission.accountCreation_Service() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:35:54Z" finished-at="2018-05-24T15:35:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=accountCreation_Service status=SUCCESS method=VerifyOrderSubmission.accountCreation_Service()[pri:40, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startMethod" is-config="true" duration-ms="1" started-at="2018-05-24T15:35:54Z" finished-at="2018-05-24T15:35:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void centuryOrderCreation.VerifyOrderSubmission.accountCreation_PrimaryContact() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="accountCreation_PrimaryContact()[pri:50, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="accountCreation_PrimaryContact" duration-ms="5412" started-at="2018-05-24T15:35:54Z" finished-at="2018-05-24T15:35:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accountCreation_PrimaryContact -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:35:59Z" finished-at="2018-05-24T15:35:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=accountCreation_PrimaryContact status=SUCCESS method=VerifyOrderSubmission.accountCreation_PrimaryContact()[pri:50, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:35:59Z" finished-at="2018-05-24T15:35:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void centuryOrderCreation.VerifyOrderSubmission.accountCreation_Billing() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="accountCreation_Billing()[pri:60, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="accountCreation_Billing" duration-ms="8195" started-at="2018-05-24T15:35:59Z" finished-at="2018-05-24T15:36:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- accountCreation_Billing -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:36:07Z" finished-at="2018-05-24T15:36:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=accountCreation_Billing status=SUCCESS method=VerifyOrderSubmission.accountCreation_Billing()[pri:60, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="addressCreation()[pri:70, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="addressCreation" duration-ms="13073" started-at="2018-05-24T15:36:07Z" finished-at="2018-05-24T15:36:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addressCreation -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:36:07Z" finished-at="2018-05-24T15:36:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void centuryOrderCreation.VerifyOrderSubmission.addressCreation() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:36:20Z" finished-at="2018-05-24T15:36:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=addressCreation status=SUCCESS method=VerifyOrderSubmission.addressCreation()[pri:70, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startMethod" is-config="true" duration-ms="1" started-at="2018-05-24T15:36:20Z" finished-at="2018-05-24T15:36:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void centuryOrderCreation.VerifyOrderSubmission.address_SiteTechnicalContact() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="address_SiteTechnicalContact()[pri:80, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="address_SiteTechnicalContact" duration-ms="8240" started-at="2018-05-24T15:36:20Z" finished-at="2018-05-24T15:36:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- address_SiteTechnicalContact -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startMethod" is-config="true" duration-ms="1" started-at="2018-05-24T15:36:29Z" finished-at="2018-05-24T15:36:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void centuryOrderCreation.VerifyOrderSubmission.serviceConfiguration() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:36:29Z" finished-at="2018-05-24T15:36:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=address_SiteTechnicalContact status=SUCCESS method=VerifyOrderSubmission.address_SiteTechnicalContact()[pri:80, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="serviceConfiguration()[pri:90, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="serviceConfiguration" duration-ms="22443" started-at="2018-05-24T15:36:29Z" finished-at="2018-05-24T15:36:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- serviceConfiguration -->
-        <test-method status="PASS" signature="orderSummary()[pri:100, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="orderSummary" duration-ms="4991" started-at="2018-05-24T15:36:51Z" finished-at="2018-05-24T15:36:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- orderSummary -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:36:51Z" finished-at="2018-05-24T15:36:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void centuryOrderCreation.VerifyOrderSubmission.orderSummary() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:36:51Z" finished-at="2018-05-24T15:36:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=serviceConfiguration status=SUCCESS method=VerifyOrderSubmission.serviceConfiguration()[pri:90, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="cmLogout()[pri:110, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="cmLogout" duration-ms="744" started-at="2018-05-24T15:36:56Z" finished-at="2018-05-24T15:36:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cmLogout -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:36:56Z" finished-at="2018-05-24T15:36:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void centuryOrderCreation.VerifyOrderSubmission.cmLogout() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:36:56Z" finished-at="2018-05-24T15:36:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=orderSummary status=SUCCESS method=VerifyOrderSubmission.orderSummary()[pri:100, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endTest" is-config="true" duration-ms="282" started-at="2018-05-24T15:36:57Z" finished-at="2018-05-24T15:36:57Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="endTest" is-config="true" duration-ms="320" started-at="2018-05-24T19:20:42Z" finished-at="2018-05-24T19:20:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T15:36:57Z" finished-at="2018-05-24T15:36:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=cmLogout status=SUCCESS method=VerifyOrderSubmission.cmLogout()[pri:110, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:centuryOrderCreation.VerifyOrderSubmission@cb5822]" name="endSuite" is-config="true" duration-ms="188" started-at="2018-05-24T15:36:57Z" finished-at="2018-05-24T15:36:57Z">
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="endSuite" is-config="true" duration-ms="190" started-at="2018-05-24T19:20:43Z" finished-at="2018-05-24T19:20:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSuite -->
-      </class> <!-- centuryOrderCreation.VerifyOrderSubmission -->
-    </test> <!-- VerifyOrderSubmission -->
-  </suite> <!-- VerifyOrderSubmission -->
+      </class> <!-- sanityTestCases.VerifyCmLogin -->
+    </test> <!-- VerifyCmLogin -->
+  </suite> <!-- VerifyCmLogin -->
 </testng-results>
