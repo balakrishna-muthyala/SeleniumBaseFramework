@@ -1,7 +1,0 @@
-#browserName=IE
-#browserName=Firefox
-browserName=Chrome
-cmURL=https://sit-hydra.excelacom.in/csrportal
-csoURL=https://sit-hydra.excelacom.in/OM
-strUsername=custpmauto
-strPassword=welcome123
