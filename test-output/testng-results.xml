@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="VerifyCmLogin" duration-ms="40665" started-at="2018-05-24T13:50:02Z" finished-at="2018-05-24T13:50:43Z">
+  <suite name="VerifyCmLogin" duration-ms="44376" started-at="2018-05-24T13:54:16Z" finished-at="2018-05-24T13:55:01Z">
     <groups>
     </groups>
-    <test name="VerifyCmLogin" duration-ms="40665" started-at="2018-05-24T13:50:02Z" finished-at="2018-05-24T13:50:43Z">
+    <test name="VerifyCmLogin" duration-ms="44376" started-at="2018-05-24T13:54:16Z" finished-at="2018-05-24T13:55:01Z">
       <class name="sanityTestCases.VerifyCmLogin">
-        <test-method status="PASS" signature="startSuite(org.testng.ITestContext)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="startSuite" is-config="true" duration-ms="112" started-at="2018-05-24T19:20:02Z" finished-at="2018-05-24T19:20:02Z">
+        <test-method status="PASS" signature="startSuite(org.testng.ITestContext)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="startSuite" is-config="true" duration-ms="112" started-at="2018-05-24T19:24:16Z" finished-at="2018-05-24T19:24:16Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startSuite -->
-        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="startTest" is-config="true" duration-ms="32627" started-at="2018-05-24T19:20:02Z" finished-at="2018-05-24T19:20:35Z">
+        <test-method status="PASS" signature="startTest(org.testng.ITestContext)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="startTest" is-config="true" duration-ms="34331" started-at="2018-05-24T19:24:16Z" finished-at="2018-05-24T19:24:51Z">
           <params>
             <param index="0">
               <value>
@@ -29,11 +29,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="beforeTestClass" is-config="true" duration-ms="1" started-at="2018-05-24T19:20:35Z" finished-at="2018-05-24T19:20:35Z">
+        <test-method status="PASS" signature="beforeTestClass()[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="beforeTestClass" is-config="true" duration-ms="0" started-at="2018-05-24T19:24:51Z" finished-at="2018-05-24T19:24:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestClass -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T19:20:35Z" finished-at="2018-05-24T19:20:35Z">
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T19:24:51Z" finished-at="2018-05-24T19:24:51Z">
           <params>
             <param index="0">
               <value>
@@ -44,11 +44,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="openURL_CM()[pri:10, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="openURL_CM" duration-ms="5531" started-at="2018-05-24T19:20:35Z" finished-at="2018-05-24T19:20:40Z">
+        <test-method status="PASS" signature="openURL_CM()[pri:10, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="openURL_CM" duration-ms="5472" started-at="2018-05-24T19:24:51Z" finished-at="2018-05-24T19:24:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openURL_CM -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="endMethod" is-config="true" duration-ms="1" started-at="2018-05-24T19:20:40Z" finished-at="2018-05-24T19:20:40Z">
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T19:24:56Z" finished-at="2018-05-24T19:24:56Z">
           <params>
             <param index="0">
               <value>
@@ -59,7 +59,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T19:20:40Z" finished-at="2018-05-24T19:20:40Z">
+        <test-method status="PASS" signature="startMethod(java.lang.reflect.Method)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="startMethod" is-config="true" duration-ms="0" started-at="2018-05-24T19:24:56Z" finished-at="2018-05-24T19:24:56Z">
           <params>
             <param index="0">
               <value>
@@ -70,11 +70,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startMethod -->
-        <test-method status="PASS" signature="cmLogin()[pri:20, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="cmLogin" duration-ms="2163" started-at="2018-05-24T19:20:40Z" finished-at="2018-05-24T19:20:42Z">
+        <test-method status="PASS" signature="cmLogin()[pri:20, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="cmLogin" duration-ms="1821" started-at="2018-05-24T19:24:56Z" finished-at="2018-05-24T19:24:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cmLogin -->
-        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T19:20:42Z" finished-at="2018-05-24T19:20:42Z">
+        <test-method status="PASS" signature="endMethod(org.testng.ITestResult)[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="endMethod" is-config="true" duration-ms="0" started-at="2018-05-24T19:24:58Z" finished-at="2018-05-24T19:24:58Z">
           <params>
             <param index="0">
               <value>
@@ -85,11 +85,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endMethod -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="endTest" is-config="true" duration-ms="320" started-at="2018-05-24T19:20:42Z" finished-at="2018-05-24T19:20:43Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="endTest" is-config="true" duration-ms="2724" started-at="2018-05-24T19:24:58Z" finished-at="2018-05-24T19:25:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="endSuite" is-config="true" duration-ms="190" started-at="2018-05-24T19:20:43Z" finished-at="2018-05-24T19:20:43Z">
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:sanityTestCases.VerifyCmLogin@18be83e4]" name="endSuite" is-config="true" duration-ms="193" started-at="2018-05-24T19:25:01Z" finished-at="2018-05-24T19:25:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSuite -->
