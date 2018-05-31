@@ -60,6 +60,6 @@ public class Variables {
 	public static String screenshotsReportFolder;
 	public String testReportFile;
 
-	
+	public String uploadFilePath = "D:\\new.txt" ;
 	
 }

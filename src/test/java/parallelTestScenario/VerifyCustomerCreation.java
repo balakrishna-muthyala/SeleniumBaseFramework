@@ -47,5 +47,15 @@ public class VerifyCustomerCreation extends FrameworkBase
 		new CustomerTab(fBase).customerCreation();
 	}
 
-
+/*	@Test(priority=40)
+	public void fileAttachment() throws Exception
+	{
+		new Attachments(fBase).centuryAttachments();		
+	}
+*/
+	
+	
+	
 }
+
+

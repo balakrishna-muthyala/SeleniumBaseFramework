@@ -149,7 +149,7 @@ public class ServicePage extends FrameworkBase{
 
 	//Order Summary Tab
 
-	public void orderSummary() throws InterruptedException, IOException
+	public void orderSummary() throws Exception
 	{
 		UtilityClass util = new UtilityClass(fBase);
 		
@@ -180,6 +180,9 @@ public class ServicePage extends FrameworkBase{
 		fBase.driver.findElement(By.xpath("//td[@id='salesOrderSubmitDate-inputCell']/input")).click();
 		fBase.driver.findElement(By.xpath("(//div[@class='x-datepicker-footer'])[3]/a/span/span/span/following-sibling::span")).click();
 		Thread.sleep(1000);
+		
+		//Uploading Attachments
+		new Attachments(fBase).centuryAttachments();	
 		
 		fBase.driver.findElement(By.id("submitOrder")).click();
 		

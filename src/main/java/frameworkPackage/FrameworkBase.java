@@ -152,7 +152,8 @@ public class FrameworkBase extends Variables{
 
 		//driver.close();
 		
-		WindowsUtils.killByName("chromedriver.exe");
+		//WindowsUtils.killByName("chromedriver.exe");
+		
 		/*WindowsUtils.killByName("geckodriver.exe");
 		WindowsUtils.killByName("IEDriverServer.exe");*/
 

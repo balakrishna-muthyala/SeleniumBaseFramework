@@ -109,7 +109,7 @@ public class CustomerTab extends FrameworkBase{
 		cmbZipcode.click();		
 		lst36310.click();
 		Thread.sleep(1000);
-		
+
 		btnCreate.click();
 		
 		util.waitForElement("name", "disclaimer", 5);
@@ -144,6 +144,11 @@ public class CustomerTab extends FrameworkBase{
 			fBase.extentReportsStep("Customer creation", "FAIL", "YES");
 		}
 
+		
+		//Uploading Attachments
+		new Attachments(fBase).centuryAttachments();	
+		
+		
 		/*		
 		fBase.driver.findElement(By.linkText("New Customer")).click();
 		Thread.sleep(5000);
