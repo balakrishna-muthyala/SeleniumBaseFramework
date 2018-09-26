@@ -1,5 +1,6 @@
 package sampleTestPackage;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,8 +38,9 @@ public class SampleTestClass extends FrameworkBase
 		
 		String baseUrl = "https://files.fm/";
 		driver.get(baseUrl);
+		Thread.sleep(2000);
 		
-		//Files direct uploading without using AutoIt or Robot classes
+		//Files uploading without using AutoIt or Robot classes by using the direct upload link in the application
         WebElement uploadElement = driver.findElement(By.xpath("//input[@id='file_upload']/following-sibling::input"));
         uploadElement.sendKeys("D:\\new.txt");
         Thread.sleep(2000);
